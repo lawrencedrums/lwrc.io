@@ -7,3 +7,6 @@ class Project(models.Model):
     url = models.URLField()
     repo = models.URLField(blank=True)
     publish_date = models.DateField()
+
+    def __str__(self):
+        return self.title
