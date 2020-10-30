@@ -1,0 +1,2 @@
+frontend/src/components/media/** filter=lfs diff=lfs merge=lfs -text
+frontend/src/components/media/*.jpg filter=lfs diff=lfs merge=lfs -text
