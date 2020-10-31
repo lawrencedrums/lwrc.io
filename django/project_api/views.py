@@ -9,3 +9,10 @@ class ProjectViewSet(viewsets.ReadOnlyModelViewSet):
     """
     queryset = Project.objects.order_by('-publish_date')
     serializer_class = ProjectSerializer
+
+class RecentProjectViewSet(viewsets.ReadOnlyModelViewSet):
+    """
+    Create API view for most recent 3 projects
+    """
+    queryset = Project.objects.order_by('-publish_date')[:3]
+    serializer_class = ProjectSerializer
