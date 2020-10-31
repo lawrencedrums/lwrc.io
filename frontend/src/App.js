@@ -1,26 +1,14 @@
 import logo from './logo.svg';
 import './App.css';
+import RecentProjects from './components/RecentProjects'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <a>or not...</a>
-      </header>
+      <h1>My recent projects:</h1>
+      <RecentProjects />
     </div>
   );
-}
+};
 
 export default App;
