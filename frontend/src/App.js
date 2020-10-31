@@ -1,12 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
 import RecentProjects from './components/RecentProjects'
 
 function App() {
   return (
     <div className="App">
-      <h1>My recent projects:</h1>
-      <RecentProjects />
+      <div className="LandingPage">
+        <h1>Lawrence Wong</h1>
+        <p>You are not my friend, you're my brother, my friend.</p>
+      </div>
+      <div className="RecentProjects">
+        <h2>My recent projects:</h2>
+        <RecentProjects />
+      </div>
     </div>
   );
 };

@@ -1,10 +1,10 @@
 import React from 'react';
 
 class RecentProjects extends React.Component {
-  constructor(props) {
-    super(props);
+  state = { title: '', description: ''};
 
-    this.state = { title: 'SortVis', description: 'A sorting visualizer, duh!' }
+  componentDidMount() {
+    this.setState({ title: 'SortVis', description: "It's a sorting visualizer, duh!"});
   }
 
   render() {
