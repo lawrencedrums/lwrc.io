@@ -21,6 +21,7 @@
 
   justify-content: center;
   align-items: center;
+
 }
 
 .homepage .home-title {
@@ -31,5 +32,17 @@
 }
 
 .homepage .home-title h1 {
-  font-size: 50px;
+  font-size: 60px;
+  color: white;
+}
+
+.homepage .home-title p {
+  font-size: 24px;
+  color: white;
+}
+
+.homepage .video-background {
+  object-fit: cover;
+  width: inherit;
+  height: inherit;
 }
