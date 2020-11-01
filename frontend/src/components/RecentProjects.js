@@ -6,7 +6,7 @@ class RecentProjects extends React.Component {
 
   componentDidMount() {
     axios.get('http://0.0.0.0:8000/projects/?format=json')
-    .then(function (response) {
+    .then(response => {
       console.log(response.data);
     })
     this.setState({ title: 'SortVis', description: "It's a sorting visualizer, duh!"});
