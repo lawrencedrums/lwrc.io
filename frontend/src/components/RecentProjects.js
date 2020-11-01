@@ -2,22 +2,26 @@ import axios from 'axios';
 import React from 'react';
 
 class RecentProjects extends React.Component {
-  state = { title: '', description: ''};
+  state = { projects: [] };
 
-  componentDidMount() {
-    axios.get('http://0.0.0.0:8000/projects/?format=json')
-    .then(response => {
-      console.log(response.data);
-    })
-    this.setState({ title: 'SortVis', description: "It's a sorting visualizer, duh!"});
+  async componentDidMount() {
+    const response = await axios.get('http://0.0.0.0:8000/recentprojects/?format=json')
+
+    this.setState({ projects: response.data });
   }
 
   render() {
     return (
-      <div>
-        <h2>{ this.state.title }</h2>
-        <p>{ this.state.description }</p>
-      </div>
+      <ul>{ this.state.projects.map(project => {
+        return (
+          <div style={{ margin: "40px" }}>
+            { project.title } | { project.description }
+            <img style={{ height: "200px", width: "360px"}} 
+            src={ project.image } />
+          </div>
+          );
+        })}
+      </ul>
     )
   };
 }
