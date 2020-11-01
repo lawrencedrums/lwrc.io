@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React from 'react';
+import './RecentProjects.css';
 
 class RecentProjects extends React.Component {
   state = { projects: [] };
@@ -12,16 +13,23 @@ class RecentProjects extends React.Component {
 
   render() {
     return (
-      <ul>{ this.state.projects.map(project => {
-        return (
-          <div style={{ margin: "40px" }}>
-            { project.title } | { project.description }
-            <img style={{ height: "200px", width: "360px"}} 
-            src={ project.image } />
-          </div>
-          );
-        })}
-      </ul>
+      <div class="cards-container">
+        <h1 style={{ margin: '50px auto', width: '80%' }}>Latest Projects</h1>
+
+          {/* Unpack state data and render list */}
+          { this.state.projects.map(({ id, title, description, image}) => {
+            return (
+              <div className="project-cards">
+                <div key={id} class="card-image">
+                  <img alt={description} src={image} />
+                  <div class="card-title">
+                    <p>{title}</p>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+      </div>
     )
   };
 }

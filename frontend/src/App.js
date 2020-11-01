@@ -8,10 +8,7 @@ function App() {
         <h1>Lawrence Wong</h1>
         <p>You are not my friend, you're my brother, my friend.</p>
       </div>
-      <div className="RecentProjects">
-        <h2>My recent projects:</h2>
-        <RecentProjects />
-      </div>
+      <RecentProjects />
     </div>
   );
 };

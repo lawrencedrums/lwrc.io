@@ -1,0 +1,42 @@
+/* https://codepen.io/abhishek747/pen/BbWKVa?editors=1100 */
+
+.cards-container {
+  margin: 10px auto;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.project-cards {
+  width: 800px;
+  height: 220px;
+  border-radius: 10px;
+  transition: 0.4s;
+}
+
+.project-cards .card-image {
+  width: inherit;
+  height: inherit;
+  border-radius: 10px;
+}
+
+.project-cards .card-image img {
+  width: inherit;
+  height: inherit;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.project-cards:hover {
+  transform: scale(0.98, 0.98);
+}
+
+.project-cards .card-title {
+  text-align: center;
+  margin-top: -130px;
+  height: 50px;
+  font-weight: bold;
+  font-size: 30px;
+  color: white;
+}
