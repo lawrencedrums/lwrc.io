@@ -3,7 +3,7 @@ from django.urls import path, include
 from rest_framework import routers
 from project_api.views import ProjectViewSet, RecentProjectViewSet
 
-router = routers.DefaultRouter(ProjectViewSet)
+router = routers.DefaultRouter()
 router.register('projects', ProjectViewSet)
 router.register('recentprojects', RecentProjectViewSet)
 

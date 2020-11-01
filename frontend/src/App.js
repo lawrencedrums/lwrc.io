@@ -4,7 +4,7 @@ import RecentProjects from './components/RecentProjects'
 function App() {
   return (
     <div className="App">
-      <div className="LandingPage">
+      <div className="title-page">
         <h1>Lawrence Wong</h1>
         <p>You are not my friend, you're my brother, my friend.</p>
       </div>
