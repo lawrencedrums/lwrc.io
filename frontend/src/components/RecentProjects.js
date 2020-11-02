@@ -14,7 +14,7 @@ class RecentProjects extends React.Component {
   render() {
     return (
       <div class="cards-container">
-        <h1 style={{ margin: '50px auto', width: '80%' }}>Latest Projects</h1>
+        <h1 style={{ margin: '50px auto', width: '80%', fontSize: '45px' }}>Latest Projects</h1>
 
           {/* Unpack state data and render list */}
           { this.state.projects.map(({ id, title, description, image}) => {
