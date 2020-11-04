@@ -17,16 +17,18 @@ class RecentProjects extends React.Component {
         <h1 style={{ margin: '50px auto', width: '80%', fontSize: '45px' }}>Latest Projects</h1>
 
           {/* Unpack state data and render list */}
-          { this.state.projects.map(({ id, title, description, image}) => {
+          { this.state.projects.map(({ id, title, description, image, url}) => {
             return (
-              <div className="project-cards">
-                <div key={id} class="card-image">
-                  <img alt={description} src={image} />
-                  <div class="card-title">
-                    <p>{title}</p>
+              <a href={url} target="_blank">
+                <div className="project-cards">
+                  <div key={id} class="card-image">
+                    <img alt={description} src={image} />
+                    <div class="card-title">
+                      <p>{title}</p>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </a>
             );
           })}
       </div>
