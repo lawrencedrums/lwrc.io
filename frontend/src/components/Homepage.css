@@ -20,32 +20,35 @@
 }
 
 .home-title {
-  top: 45%;
+  top: 40%;
   left: 12%;
+  width: 40vw;
   position: absolute;
   text-align: center;
 }
 
 .home-title h1 {
-  font-size: 60px;
+  margin-bottom: 30px;
+  font-size: 4.3vw;
   color: white;
+  text-align: left;
 }
 
 .home-description p {
-  font-size: 32px;
+  font-size: 1.6vw;
+  text-align: left;
   color: white;
-  margin: 0px;
 }
 
 .down-icon {
   position: absolute;
-  bottom: 2%;
+  bottom: 5%;
   left: 48%;
   transition: 0.4s;
 }
 
 .down-icon:hover {
-  transform: scale(0.95, 0.95); 
+  transform: scale(1.1, 1.1); 
 }
 
 .homepage .video-background {

@@ -12,12 +12,12 @@ class Homepage extends React.Component {
         <div className="home-title">
           <h1>Lawrence Wong</h1>
           <div className="home-description">
-            <p>Design and Develop.</p>
-            <p>Engineer and Produce.</p>
+            <p>I am a freelance Drummer, Audio Engineer and self-taught Software Engineer based in Hong Kong.</p>
+            <p>Scroll down and see stuff.</p>
           </div>
         </div>
         <div className="down-icon">
-          <i class="angle double down huge inverted icon"></i>
+          <i class="angle down huge inverted icon"></i>
         </div>
       </div>
     );
