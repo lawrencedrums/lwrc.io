@@ -18,27 +18,24 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
-.project-cards img {
+.card-image {
   width: inherit;
   height: inherit;
   border-radius: 10px;
   object-fit: cover;
+  transition: 0.4s;
 }
 
 .card-title {
   position: absolute;
   font-weight: bold;
   font-size: 36px;
-  color: white;
-  transition: 0.4s;
+  color: white; 
 }
 
-.project-cards:hover {
-  transform: scale(1.05, 1.05);
-}
-
-.project-cards:hover .card-title{
-  transform: scale(1.15, 1.15);
+.card-image:hover {
+  transform: scale(1.08, 1.08);
 }
