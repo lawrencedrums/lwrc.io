@@ -9,9 +9,9 @@
 }
 
 .project-cards {
-  width: 60vw;
-  height: 25vh;
-  border-radius: 5px;
+  width: 50vw;
+  height: 35vh;
+  border-radius: 10px;
   transition: 0.4s;
   margin: 4px;
   position: relative;
@@ -24,7 +24,6 @@
 .card-image {
   width: inherit;
   height: inherit;
-  border-radius: 10px;
   object-fit: cover;
   transition: 0.4s;
 }
