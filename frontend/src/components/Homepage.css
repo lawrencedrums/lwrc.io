@@ -18,7 +18,7 @@
   justify-content: center;
   align-items: center;
 
-  background-image: url(./media/bg.jpg);
+  background: url(./media/bg.jpg) center;
   background-size: cover;
 }
 
@@ -35,15 +35,17 @@
   font-size: 4.3vw;
   color: white;
   text-align: center;
+  font-family: 'Lato', sans-serif;
 }
 
 .home-description p {
-  font-size: 1.6vw;
-  text-align: left;
+  font-size: 2vw;
+  text-align: center;
   color: white;
+  font-family: 'Inter', sans-serif;
 }
 
-.down-icon {
+/* .down-icon {
   position: absolute;
   bottom: 5%;
   left: 48%;
@@ -52,4 +54,4 @@
 
 .down-icon:hover {
   transform: scale(1.1, 1.1); 
-}
+} */

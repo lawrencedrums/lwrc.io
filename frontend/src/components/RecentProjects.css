@@ -1,24 +1,30 @@
 /* https://codepen.io/abhishek747/pen/BbWKVa?editors=1100 */
 
 .cards-container {
-  margin: 20px auto;
-  width: 80%;
+  width: 100%;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  background-color: #f6f6e9;
+}
+
+.cards-container h1 {
+  margin: 60px;
+  width: 80%;
+  font-size: 40px;
 }
 
 .project-cards {
   width: 50vw;
-  height: 35vh;
+  height: 30vh;
   border-radius: 10px;
-  transition: 0.4s;
-  margin: 4px;
+  margin: 10px;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  box-shadow: 0 4px 4px 0px rgba(0, 0, 0, 0.3);
 }
 
 .card-image {
@@ -35,6 +41,6 @@
   color: white; 
 }
 
-.card-image:hover {
+.project-cards:hover .card-image{
   transform: scale(1.08, 1.08);
 }
