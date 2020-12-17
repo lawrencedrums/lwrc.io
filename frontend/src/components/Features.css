@@ -8,7 +8,7 @@
 
 .features-title {
   margin-top: 200px;
-  margin-bottom: 100px;
+  margin-bottom: 120px;
   width: 80%;
 }
 
@@ -21,4 +21,50 @@
   font-family: 'Inter';
   font-size: 2vw;
   color: #9fa0a5;
+}
+
+.items-container {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.grid-content {
+  margin-top: 60px;
+  width: 40vw;
+  height: 40vh;
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid-item-title h1 {
+  font-size: 2.5vw;
+  color: white;
+}
+
+.grid-item-content p {
+  padding: 30px;
+  font-family: 'Inter';
+  font-size: 1.5vw;
+  color: #9fa0a5;
+}
+
+.grid-image-container {
+  width: inherit;
+  height: 40vh;
+  object-fit: cover;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.grid-item-image {
+  width: inherit;
+  height: inherit;
+  object-fit: cover;
 }
