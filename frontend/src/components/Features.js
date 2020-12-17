@@ -1,20 +1,17 @@
 import React from 'react';
 import './Features.css';
 
-class Features extends React.Component{
-  render() {
-    return (
-      <div className="features">
-        <div className="features-title">        
-          <h1>I do stuff, gimme work.</h1>
-          <p>I am good at my craft. Trust me, I'm an (audio) engineer.</p>
-        </div>
-        <div className="services-container">
-          Here are the services I provide:
-        </div>
+const Features = () => {
+  return (
+    <div className="features-container">
+      <div className="features-title">        
+        <h1>"Dude, do you have ADHD or something?"</h1>
+        <p>- The guitarist</p>
       </div>
-    );
-  };
+      <div className="services-container">
+      </div>
+    </div>
+  );
 };
 
 export default Features;

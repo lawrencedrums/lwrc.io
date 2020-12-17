@@ -1,18 +1,24 @@
-.features {
+.features-container {
   width: 100%;
-  height: 80vh;
-  display: block;
-  flex-wrap: wrap;
+  display: flex;
   justify-content: center;
-  background-color: #efefd7;
+  flex-wrap: wrap;
+  background-color: #111111;
+}
+
+.features-title {
+  margin-top: 200px;
+  margin-bottom: 100px;
+  width: 80%;
 }
 
 .features-title h1 {
-  padding-top: 20vh;
-  font-size: 6vw;
+  font-size: 4vw;
+  color: #FF8662;
 }
 
 .features-title p {
   font-family: 'Inter';
   font-size: 2vw;
+  color: #9fa0a5;
 }
