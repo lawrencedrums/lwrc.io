@@ -4,11 +4,12 @@
   justify-content: center;
   flex-wrap: wrap;
   background-color: #111111;
+  padding-bottom: 100px;
 }
 
 .features-title {
-  margin-top: 200px;
-  margin-bottom: 120px;
+  margin-top: 240px;
+  margin-bottom: 160px;
   width: 80%;
 }
 
@@ -39,12 +40,12 @@
   align-items: center;
 }
 
-.grid-item-title h1 {
+.grid-item-title {
   font-size: 2.5vw;
   color: white;
 }
 
-.grid-item-content p {
+.grid-item-content {
   padding: 30px;
   font-family: 'Inter';
   font-size: 1.5vw;

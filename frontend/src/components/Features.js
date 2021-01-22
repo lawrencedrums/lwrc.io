@@ -32,8 +32,8 @@ const Features = () => {
   const itemsGrid = featureItems.map(item => {
     return <div key={ item.title }>
       <div className="grid-content">
-        <div className="grid-item-title"><h1>{ item.title }</h1></div>
-        <div className="grid-item-content"><p>{ item.content }</p></div>
+        <div className="grid-item-title">{ item.title }</div>
+        <div className="grid-item-content">{ item.content }</div>
         <div className="grid-image-container">
           <img className="grid-item-image" src={ item.image } />
         </div>

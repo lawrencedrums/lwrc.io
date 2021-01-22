@@ -1,37 +1,36 @@
 import axios from 'axios';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './RecentProjects.css';
 
-class RecentProjects extends React.Component {
-  state = { projects: [] };
-  // const [projects, setProjects] = useState([]);
+const RecentProjects = () => {
+  const [projectsData, setProjectsData] = useState([null]);
 
-  async componentDidMount() {
-    const response = await axios.get('http://0.0.0.0:8000/recentprojects/?format=json')
+  useEffect(() => {
+    axios.get('http://0.0.0.0:8000/recentprojects/?format=json')
+    .then((response) => {
+      setProjectsData(response.data);
+    })
+    .catch((error) => {
+      console.log(error)
+    })
+  });
 
-    this.setState({ projects: response.data });
-    // setProjects(response.data);
-  }
+  return (
+    <div className="cards-container">
+      <h1>Latest Projects</h1>
 
-  render() {
-    return (
-      <div className="cards-container">
-        <h1>Latest Projects</h1>
-
-          {/* Unpack state data and render list of projects */}
-          { this.state.projects.map(({ id, title, description, image, url}) => {
-            return (
-              <a href={url} target="_blank">
-                <div className="project-cards" key={id}>
-                  <img className="card-image" alt={description} src={image} />
-                  <div className="card-title">{title}</div>
-                </div>
-              </a>
-            );
-          })}
-      </div>
-    )
-  };
+        { projectsData.map((projects) => {
+          // return (
+            <a href={projects.url} target="_blank">
+              <div className="project-cards" key={projects.id}>
+                <img className="card-image" alt={projects.description} src={projects.image} />
+                <div className="card-title">{projects.title}</div>
+              </div>
+            </a>
+          // );
+        })}
+    </div>
+  )
 }
 
 export default RecentProjects;
