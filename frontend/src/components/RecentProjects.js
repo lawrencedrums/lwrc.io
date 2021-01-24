@@ -8,7 +8,6 @@ const RecentProjects = () => {
   const fetchData = async () => {
     const { data } = await axios.get('http://0.0.0.0:8000/recentprojects/?format=json');
     setProjects(data);
-    console.log(data);
   }
 
   useEffect(() => {

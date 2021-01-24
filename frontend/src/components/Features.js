@@ -1,50 +1,47 @@
 import React from 'react';
 import './Features.css';
-import gridAcoustics from './media/grid-acoustics.jpg';
-import gridDrums from './media/grid-drums.jpg';
-import gridDesign from './media/grid-design.jpg';
-import gridAudio from './media/grid-audio.jpg';
+import drumsPNG from './media/grid-band-bro.png';
+import recordPNG from './media/grid-Recording-bro.png';
+import studioPNG from './media/grid-Architect-bro.png';
+
+
+// import recordingSVG, { ReactComponent as recordingSVG2 } from './media/recording-animate.svg'
 
 const featureItems = [
   {
-    title: "Drumming",
-    content: "Drummer with 8+ years of studio and live performance experiences.",
-    image: gridDrums,
+    image: drumsPNG,
+    title: "Musicianship",
+    description: "Drummer with 10+ years of studio and live performance experiences at your service.",
   },
   {
-    title: "Audio engineering",
-    content: "From recording to mixing and mastering, I've got you covered.",
-    image: gridAudio,
+    image: recordPNG,
+    title: "Sound Engineering",
+    description: "Need your music recorded, mixed, and mastered? Our producers have got you covered.",
   },
   {
-    title: "Studio design",
-    content: "Control room and live room acoustic treatment and design.",
-    image: gridAcoustics,
-  },
-  {
-    title: "Web design",
-    content: "Look and sound goes hand in hand. You deserve both.",
-    image: gridDesign,
+    image: studioPNG,
+    title: "Studio Design",
+    description: "Recording studio design and acoustic treatment done with precision and passion.",
   },
 ]
 
 const Features = () => {
-  const itemsGrid = featureItems.map(item => {
+  const itemsGrid = featureItems.map((item) => {
     return <div key={ item.title }>
-      <div className="grid-content">
-        <div className="grid-item-title">{ item.title }</div>
-        <div className="grid-item-content">{ item.content }</div>
+      <div className="grid-items">
         <div className="grid-image-container">
           <img className="grid-item-image" src={ item.image } />
         </div>
+        <div className="grid-item-title">{ item.title }</div>
+        <div className="grid-item-description">{ item.description }</div>
       </div>
     </div>
   });
 
   return (
     <div className="features-container">
-      <div className="features-title">        
-        <h1>"Dude, do you have ADHD or something?"</h1>
+      <div className="features-quote">
+        <h1>"Possibly the best drummer in the band."</h1>
         <p>- The guitarist</p>
       </div>
       <div className="items-container">

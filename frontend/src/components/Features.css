@@ -7,65 +7,64 @@
   padding-bottom: 100px;
 }
 
-.features-title {
-  margin-top: 240px;
-  margin-bottom: 160px;
-  width: 80%;
+.features-quote {
+  margin: 200px;
 }
 
-.features-title h1 {
+.features-quote h1 {
   font-size: 4vw;
   color: #FF8662;
-}
+} 
 
-.features-title p {
+.features-quote p {
   font-family: 'Inter';
   font-size: 2vw;
   color: #9fa0a5;
 }
 
 .items-container {
-  width: 80%;
+  width: 90%;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
 
-.grid-content {
-  margin-top: 60px;
-  width: 40vw;
-  height: 40vh;
+.grid-items {
+  margin: 20px;
+  width: 25vw;
+  height: 25vh;
   display: inline-block;
   justify-content: center;
   align-items: center;
 }
 
 .grid-item-title {
+  padding-top: 40px;
   font-size: 2.5vw;
   color: white;
 }
 
-.grid-item-content {
-  padding: 30px;
+.grid-item-description {
+  padding-top: 30px;
+  line-height: 120%;
   font-family: 'Inter';
   font-size: 1.5vw;
   color: #9fa0a5;
 }
 
 .grid-image-container {
-  width: inherit;
-  height: 40vh;
   object-fit: cover;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  border-radius: 10px;
+  background: #F5F6F5;
+  border-radius: 20px;
 }
 
 .grid-item-image {
-  width: inherit;
-  height: inherit;
+  width: 30vw;
+  height: 40vh;
   object-fit: cover;
 }

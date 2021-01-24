@@ -7,7 +7,7 @@ const Homepage = () => {
       <div className="home-title">
         <h1>Lawrence Wong</h1>
         <div className="home-description">
-          <p>Perfect your groove.</p>
+          <p>Perfect your groove</p>
         </div>
       </div>
       {/* <div className="down-icon">

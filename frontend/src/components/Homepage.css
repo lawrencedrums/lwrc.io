@@ -32,16 +32,17 @@
 
 .home-title h1 {
   margin-bottom: 30px;
-  font-size: 4.3vw;
+  font-size: 4.5vw;
   color: white;
   text-align: center;
   font-family: 'Lato', sans-serif;
 }
 
 .home-description p {
-  font-size: 2vw;
+  font-size: 2.5vw;
+  font-weight: bold;
   text-align: center;
-  color: white;
+  color: #FF8662;
   font-family: 'Inter', sans-serif;
 }
 
