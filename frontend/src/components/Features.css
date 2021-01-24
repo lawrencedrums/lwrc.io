@@ -22,6 +22,12 @@
   color: #9fa0a5;
 }
 
+.features-level {
+  color: #E5E5E5;
+  text-align: left;
+  padding: 30px;
+}
+
 .items-container {
   width: 90%;
   display: flex;
@@ -29,7 +35,7 @@
   flex-wrap: wrap;
 }
 
-.grid-items {
+.card-items {
   margin: 20px;
   width: 25vw;
   height: 25vh;
@@ -38,13 +44,13 @@
   align-items: center;
 }
 
-.grid-item-title {
+.card-item-title {
   padding-top: 40px;
   font-size: 2.5vw;
   color: white;
 }
 
-.grid-item-description {
+.card-item-description {
   padding-top: 30px;
   line-height: 120%;
   font-family: 'Inter';
@@ -52,7 +58,7 @@
   color: #9fa0a5;
 }
 
-.grid-image-container {
+.card-image-container {
   object-fit: cover;
   position: relative;
   display: flex;
@@ -63,7 +69,7 @@
   border-radius: 20px;
 }
 
-.grid-item-image {
+.card-item-image {
   width: 30vw;
   height: 40vh;
   object-fit: cover;

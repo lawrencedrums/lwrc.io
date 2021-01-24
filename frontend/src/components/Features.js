@@ -7,7 +7,7 @@ import studioPNG from './media/grid-Architect-bro.png';
 
 // import recordingSVG, { ReactComponent as recordingSVG2 } from './media/recording-animate.svg'
 
-const featureItems = [
+const cardItems = [
   {
     image: drumsPNG,
     title: "Musicianship",
@@ -26,14 +26,14 @@ const featureItems = [
 ]
 
 const Features = () => {
-  const itemsGrid = featureItems.map((item) => {
+  const cards = cardItems.map((item) => {
     return <div key={ item.title }>
-      <div className="grid-items">
-        <div className="grid-image-container">
-          <img className="grid-item-image" src={ item.image } />
+      <div className="card-items">
+        <div className="card-image-container">
+          <img className="card-item-image" src={ item.image } />
         </div>
-        <div className="grid-item-title">{ item.title }</div>
-        <div className="grid-item-description">{ item.description }</div>
+        <div className="card-item-title">{ item.title }</div>
+        <div className="card-item-description">{ item.description }</div>
       </div>
     </div>
   });
@@ -44,8 +44,11 @@ const Features = () => {
         <h1>"Possibly the best drummer in the band."</h1>
         <p>- The guitarist</p>
       </div>
+      <div className="features-level">
+        <h1>Bring your musical ideas to the next level</h1>
+      </div>
       <div className="items-container">
-        {itemsGrid}
+        {cards}
       </div>
     </div>
   );
