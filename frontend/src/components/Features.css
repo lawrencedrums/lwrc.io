@@ -13,17 +13,17 @@
 
 .features-quote h1 {
   font-size: 4vw;
-  color: #FF8662;
-} 
+  color: #ff8662;
+}
 
 .features-quote p {
-  font-family: 'Inter';
+  font-family: "Inter";
   font-size: 2vw;
   color: #9fa0a5;
 }
 
 .features-level {
-  color: #E5E5E5;
+  color: #e5e5e5;
   text-align: left;
   padding: 80px;
 }
@@ -42,7 +42,7 @@
   justify-content: center;
   align-items: center;
   background: #222222;
-  border: 2px solid #F5F6F5;
+  border: 2px solid #f5f6f5;
   border-radius: 25px;
 }
 
@@ -55,7 +55,7 @@
 .card-item-description {
   padding: 40px;
   line-height: 120%;
-  font-family: 'Inter';
+  font-family: "Inter";
   font-size: 1.2vw;
   color: #9fa0a5;
 }
@@ -67,8 +67,9 @@
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  background: #F5F6F5;
-  border-radius: 20px;
+  background: #f5f6f5;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
 
 .card-item-image {

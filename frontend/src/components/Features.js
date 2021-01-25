@@ -1,10 +1,9 @@
-import React from 'react';
-import { Card, Image } from 'semantic-ui-react';
-import './Features.css';
-import drumsPNG from './media/grid-band-bro.png';
-import recordPNG from './media/grid-Recording-bro.png';
-import studioPNG from './media/grid-Architect-bro.png';
-
+import React from "react";
+import { Card, Image } from "semantic-ui-react";
+import "./Features.css";
+import drumsPNG from "./media/grid-band-bro.png";
+import recordPNG from "./media/grid-Recording-bro.png";
+import studioPNG from "./media/grid-Architect-bro.png";
 
 // import recordingSVG, { ReactComponent as recordingSVG2 } from './media/recording-animate.svg'
 
@@ -12,31 +11,36 @@ const cardItems = [
   {
     image: drumsPNG,
     title: "Musicianship",
-    description: "Drummer with 10+ years of studio and live performance experiences at your service.",
+    description:
+      "Drummer with 10+ years of studio and live performance experiences at your service.",
   },
   {
     image: recordPNG,
     title: "Sound Engineering",
-    description: "Need your music recorded, mixed, and mastered? Our producers have you covered.",
+    description:
+      "Need your music recorded, mixed, and mastered? Our producers have you covered.",
   },
   {
     image: studioPNG,
     title: "Studio Design",
-    description: "Recording studio acoustic treatment and design done with precision and care.",
+    description:
+      "Recording studio acoustic treatment and design done with precision and care.",
   },
-]
+];
 
 const Features = () => {
   const cards = cardItems.map((item) => {
-    return <div key={ item.title }>
-      <div className="card-items">
-        <div className="card-image-container">
-          <img className="card-item-image" src={ item.image } />
+    return (
+      <div key={item.title}>
+        <div className="card-items">
+          <div className="card-image-container">
+            <img className="card-item-image" src={item.image} />
+          </div>
+          <div className="card-item-title">{item.title}</div>
+          <div className="card-item-description">{item.description}</div>
         </div>
-        <div className="card-item-title">{ item.title }</div>
-        <div className="card-item-description">{ item.description }</div>
       </div>
-    </div>
+    );
   });
 
   return (
@@ -48,9 +52,7 @@ const Features = () => {
       <div className="features-level">
         <h1>Bring your musical ideas to the next level</h1>
       </div>
-      <div className="items-container">
-        {cards}
-      </div>
+      <div className="items-container">{cards}</div>
     </div>
   );
 };
