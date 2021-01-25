@@ -1,4 +1,5 @@
 import React from 'react';
+import { Card, Image } from 'semantic-ui-react';
 import './Features.css';
 import drumsPNG from './media/grid-band-bro.png';
 import recordPNG from './media/grid-Recording-bro.png';
@@ -28,13 +29,15 @@ const cardItems = [
 const Features = () => {
   const cards = cardItems.map((item) => {
     return <div key={ item.title }>
-      <div className="card-items">
+      <Card className="card-items">
         <div className="card-image-container">
-          <img className="card-item-image" src={ item.image } />
+          <Image className="card-item-image" src={ item.image } />
         </div>
-        <div className="card-item-title">{ item.title }</div>
-        <div className="card-item-description">{ item.description }</div>
-      </div>
+        <Card.Content>
+          <Card.Header className="card-item-title">{ item.title }</Card.Header>
+          <Card.Description className="card-item-description">{ item.description }</Card.Description>
+        </Card.Content>
+      </Card>
     </div>
   });
 
@@ -47,9 +50,9 @@ const Features = () => {
       <div className="features-level">
         <h1>Bring your musical ideas to the next level</h1>
       </div>
-      <div className="items-container">
+      <Card.Group className="items-container">
         {cards}
-      </div>
+      </Card.Group>
     </div>
   );
 };

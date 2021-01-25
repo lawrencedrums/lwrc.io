@@ -38,7 +38,7 @@
 .card-items {
   margin: 20px;
   width: 25vw;
-  height: 25vh;
+  height: 36vh;
   display: inline-block;
   justify-content: center;
   align-items: center;
@@ -59,6 +59,8 @@
 }
 
 .card-image-container {
+  width: inherit;
+  height: inherit;
   object-fit: cover;
   position: relative;
   display: flex;
@@ -67,10 +69,11 @@
   overflow: hidden;
   background: #F5F6F5;
   border-radius: 20px;
+  padding: 30px;
 }
 
 .card-item-image {
-  width: 30vw;
-  height: 40vh;
+  width: inherit;
+  height: inherit;
   object-fit: cover;
 }
