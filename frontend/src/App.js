@@ -10,12 +10,9 @@ const App = () => {
   const [isLoading, setIsLoading] = useState([true])
 
   const fetchData = async () => {
-    console.log(isLoading);
     const { data } = await axios.get('http://0.0.0.0:8000/recentprojects/?format=json');
     setProjects(data);
     setIsLoading(false);
-    console.log(projects);
-    console.log(isLoading);
   }
 
   useEffect(() => {
@@ -26,7 +23,7 @@ const App = () => {
     <div className="App">
       <Homepage />
       <Features />
-      <RecentProjects projects={projects}/>
+      <RecentProjects isLoading={isLoading} projects={projects}/>
     </div>
   );
 };

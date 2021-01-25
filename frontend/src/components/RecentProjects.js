@@ -1,9 +1,12 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 import './RecentProjects.css';
+import Loader from './Loader.js';
 
-const RecentProjects = ({projects}) => {
-  return (
+const RecentProjects = ({isLoading, projects}) => {
+  return isLoading ? (
+    <Loader/>
+   ) : (
     <div className="cards-container">
       <h1>Latest Projects</h1>
         {projects.map((project) => (
