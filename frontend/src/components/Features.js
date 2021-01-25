@@ -17,27 +17,25 @@ const cardItems = [
   {
     image: recordPNG,
     title: "Sound Engineering",
-    description: "Need your music recorded, mixed, and mastered? Our producers have got you covered.",
+    description: "Need your music recorded, mixed, and mastered? Our producers have you covered.",
   },
   {
     image: studioPNG,
     title: "Studio Design",
-    description: "Recording studio design and acoustic treatment done with precision and passion.",
+    description: "Recording studio acoustic treatment and design done with precision and care.",
   },
 ]
 
 const Features = () => {
   const cards = cardItems.map((item) => {
     return <div key={ item.title }>
-      <Card className="card-items">
+      <div className="card-items">
         <div className="card-image-container">
-          <Image className="card-item-image" src={ item.image } />
+          <img className="card-item-image" src={ item.image } />
         </div>
-        <Card.Content>
-          <Card.Header className="card-item-title">{ item.title }</Card.Header>
-          <Card.Description className="card-item-description">{ item.description }</Card.Description>
-        </Card.Content>
-      </Card>
+        <div className="card-item-title">{ item.title }</div>
+        <div className="card-item-description">{ item.description }</div>
+      </div>
     </div>
   });
 
@@ -50,9 +48,9 @@ const Features = () => {
       <div className="features-level">
         <h1>Bring your musical ideas to the next level</h1>
       </div>
-      <Card.Group className="items-container">
+      <div className="items-container">
         {cards}
-      </Card.Group>
+      </div>
     </div>
   );
 };
