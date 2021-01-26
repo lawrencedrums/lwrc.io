@@ -49,8 +49,9 @@ const Features = () => {
         <h1>"Possibly the best drummer in the band."</h1>
         <p>- The guitarist</p>
       </div>
-      <div className="features-level">
+      <div className="features-banner">
         <h1>Bring your musical ideas to the next level</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
       </div>
       <div className="items-container">{cards}</div>
     </div>
