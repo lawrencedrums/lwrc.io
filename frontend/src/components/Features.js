@@ -12,7 +12,7 @@ const cardItems = [
     image: drumsPNG,
     title: "Musicianship",
     description:
-      "Drummer with 10+ years of studio and live performance experiences at your service.",
+      "Whether it be Hip Hop, Rock, Metal, Pop, or Funk. Add some groove to your music.",
   },
   {
     image: recordPNG,
@@ -50,8 +50,8 @@ const Features = () => {
         <p>- The guitarist</p>
       </div>
       <div className="features-banner">
-        <h1>Bring your musical ideas to the next level</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <h1>Real drums. Real Good.</h1>
+        <p>I bring the best sounding and feeling drums to your music, based on 10+ years of studio and live performance experiences.</p>
       </div>
       <div className="items-container">{cards}</div>
     </div>

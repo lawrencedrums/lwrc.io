@@ -27,22 +27,27 @@
 .features-banner {
   width: 100%;
   height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
   background: url(./media/bg-banner.jpg) center;
   background-size: cover;
-  margin-bottom: 10vh;
+  background-attachment: fixed;
+  margin-bottom: 15vh;
 }
 
 .features-banner h1 {
-  margin-top: 10vh;
   font-size: 3vw;
   color: #e5e5e5;
+  margin-bottom: -10vh;
 }
 
 .features-banner p {
   width: 70%;
   font-size: 2vw;
   font-family: 'Inter', sans-serif;
-  color: #ff8662;
+  color: white;
 }
 
 .items-container {
@@ -65,16 +70,17 @@
 }
 
 .card-item-title {
-  padding-top: 40px;
+  padding-top: 20px;
   font-size: 2vw;
   color: white;
 }
 
 .card-item-description {
-  padding: 40px;
+  padding: 20px;
+  padding-bottom: 30px;
   line-height: 120%;
   font-family: "Inter";
-  font-size: 1.2vw;
+  font-size: 1.3vw;
   color: #9fa0a5;
 }
 

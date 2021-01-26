@@ -20,10 +20,11 @@
 
   background: url(./media/bg.jpg) center;
   background-size: cover;
+  background-attachment: fixed;
 }
 
 .home-title {
-  top: 40%;
+  top: 35%;
   left: 30%;
   width: 40vw;
   position: absolute;
