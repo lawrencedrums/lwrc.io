@@ -1,21 +1,19 @@
 .footer-container {
   width: 100%;
-
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   flex-wrap: wrap;
-
-  background: #dadeda;
 }
 
 .footer-text {
   width: 60%;
+  margin: 60px;
 }
 
 .footer-text h1 {
-  padding: 50px;
+  padding-bottom: 50px;
 }
 
 .footer-text p {
@@ -24,7 +22,22 @@
 }
 
 .line-separator {
-  width: 60%;
+  width: 50%;
   height: 2px;
   background: #717171;
+}
+
+.footer-socials {
+  margin: 60px;
+  padding-bottom: 100px;
+}
+
+.footer-socials img {
+  width: 70px;
+  height: 70px;
+  padding: 10px;
+}
+
+.footer-socials img:hover {
+  opacity: 60%;
 }
