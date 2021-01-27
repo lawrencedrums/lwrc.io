@@ -1,11 +1,13 @@
 .features-container {
   width: 100%;
+  padding-bottom: 100px;
+
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  
   background-color: #111111;
-  padding-bottom: 100px;
 }
 
 .features-quote {
@@ -38,13 +40,14 @@
 }
 
 .features-banner h1 {
+  width: 60%;
   font-size: 3vw;
   color: #e5e5e5;
   margin-bottom: -10vh;
 }
 
 .features-banner p {
-  width: 70%;
+  width: 60%;
   font-size: 2vw;
   font-family: 'Inter', sans-serif;
   color: white;

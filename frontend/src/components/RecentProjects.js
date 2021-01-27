@@ -9,8 +9,8 @@ const RecentProjects = ({isLoading, projects}) => {
     <div className="cards-container">
       <h1>Latest Projects</h1>
         {projects.map((project) => (
-          <a href={project.url} target="_blank">
-            <div className="project-cards" key={project.id}>
+          <a key={project.id} href={project.url} rel="noreferrer" target="_blank">
+            <div className="project-cards">
               <img className="card-image" alt={project.description} src={project.image} />
               <div className="card-title">{project.title}</div>
             </div>

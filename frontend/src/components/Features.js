@@ -33,7 +33,7 @@ const Features = () => {
       <div key={item.title}>
         <div className="card-items">
           <div className="card-image-container">
-            <img className="card-item-image" src={item.image} />
+            <img className="card-item-image" src={item.image} alt="Failed to load."/>
           </div>
           <div className="card-item-title">{item.title}</div>
           <div className="card-item-description">{item.description}</div>
@@ -49,7 +49,7 @@ const Features = () => {
         <p>- The guitarist</p>
       </div>
       <div className="features-banner">
-        <h1>Real drums. Real Good.</h1>
+        <h1>Real drums. Real good.</h1>
         <p>I bring the best sounding and feeling drums to your music, based on 10+ years of studio and live performance experiences.</p>
       </div>
       <div className="items-container">{cards}</div>
