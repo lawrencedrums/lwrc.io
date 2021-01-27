@@ -1,9 +1,10 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 import './App.css';
-import RecentProjects from './components/RecentProjects';
 import Homepage from './components/Homepage';
 import Features from './components/Features';
+import RecentProjects from './components/RecentProjects';
+import Footer from './components/Footer';
 
 const App = () => {
   const [projects, setProjects] = useState([]);
@@ -24,6 +25,7 @@ const App = () => {
       <Homepage />
       <Features />
       <RecentProjects isLoading={isLoading} projects={projects}/>
+      <Footer />
     </div>
   );
 };
