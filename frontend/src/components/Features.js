@@ -1,5 +1,4 @@
 import React from "react";
-import { Card, Image } from "semantic-ui-react";
 import "./Features.css";
 import drumsPNG from "./media/grid-band-bro.png";
 import recordPNG from "./media/grid-Recording-bro.png";
