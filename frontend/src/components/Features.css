@@ -6,7 +6,7 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  
+
   background-color: #111111;
 }
 
@@ -49,12 +49,12 @@
 .features-banner p {
   width: 60%;
   font-size: 2vw;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   color: white;
 }
 
 .items-container {
-  width: 90%;
+  width: 70%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -63,7 +63,7 @@
 
 .card-items {
   margin: 20px;
-  width: 25vw;
+  max-width: 20vw;
   display: inline-block;
   justify-content: center;
   align-items: center;
