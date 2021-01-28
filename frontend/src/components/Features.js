@@ -39,8 +39,8 @@ const Features = () => {
               alt="Failed to load."
             />
           </div>
-          <h1>{item.title}</h1>
-          <p>{item.description}</p>
+          <div className="card-item-title">{item.title}</div>
+          <div className="card-item-description">{item.description}</div>
         </div>
       </div>
     );
@@ -49,11 +49,11 @@ const Features = () => {
   return (
     <div className="features-container">
       <div className="features-quote">
-        <h1>"Possibly the best drummer in the band."</h1>
+        "Possibly the best drummer in the band."
         <p>- The guitarist</p>
       </div>
       <div className="features-banner">
-        <h1>Real drums. Real good.</h1>
+        <span>Real drums. Real good.</span>
         <div className="line-separator" />
         <p>
           Drums tuned to perfection, recorded with industry standard and most

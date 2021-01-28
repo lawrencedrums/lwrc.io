@@ -16,7 +16,7 @@
   margin: 0;
 
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
 
   background: url(./media/bg.jpg) center;
@@ -24,34 +24,27 @@
   background-attachment: fixed;
 }
 
-.home-title h1 {
-  font-size: 76px;
-  font-family: "Lato", sans-serif;
-  color: white;
+.home-text-wrapper {
   text-align: center;
+  padding-left: 80px;
+}
+
+.home-title h1 {
+  margin: 0px;
+  font-size: 80px;
+  font-family: "Amiri", serif;
+  color: white;
 }
 
 .home-description p {
-  font-size: 36px;
-  font-family: "Inter", sans-serif;
-  color: #ff8662;
-  text-align: center;
+  margin: 0px;
+  font-size: 28px;
+  color: #e1a87a;
 }
-
-/* .down-icon {
-  position: absolute;
-  bottom: 5%;
-  left: 48%;
-  transition: 0.4s;
-}
-
-.down-icon:hover {
-  transform: scale(1.1, 1.1); 
-} */
 
 @media screen and (orientation: portrait) {
   .home-title h1 {
-    font-size: 10vw;
+    font-size: 9vw;
   }
   .home-title p {
     font-size: 6vw;

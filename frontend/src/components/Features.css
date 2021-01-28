@@ -1,11 +1,9 @@
 .features-container {
   width: 100%;
-
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-
   background-color: #111111;
 }
 
@@ -13,13 +11,14 @@
   margin: 80px;
 }
 
-.features-quote h1 {
+.features-quote {
   font-size: 40px;
-  color: #ff8662;
+  color: #e1a87a;
+  font-family: "Amiri", serif;
 }
 
 .features-quote p {
-  font-family: "Inter";
+  font-family: "Open Sans", sans-serif;
   font-size: 20px;
   color: #9fa0a5;
 }
@@ -30,14 +29,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
   flex-direction: column;
   background: url(./media/bg-banner.jpg) center;
   background-size: cover;
   background-attachment: fixed;
 }
 
-.features-banner h1 {
+.features-banner {
   font-size: 40px;
   color: #e5e5e5;
 }
@@ -50,23 +48,19 @@
 }
 
 .items-container {
-  width: 90%;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
-  margin-top: 120px;
-  margin-bottom: 120px;
 }
 
 .card-item {
-  margin: 20px;
+  margin: 10px;
   width: 25vw;
-  max-width: 400px;
-  max-height: 400px;
-  display: inline-block;
+  display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   background: #222222;
   border: 2px solid #f5f6f5;
   border-radius: 25px;
@@ -74,13 +68,15 @@
 
 .card-image-container {
   width: inherit;
+  height: 30vh;
   background: #f5f6f5;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
 
 .card-item-image {
-  width: 60%;
+  width: inherit;
+  height: inherit;
   object-fit: cover;
 }
 
@@ -90,9 +86,11 @@
 }
 
 .card-item p {
+  max-width: 20vw;
   font-family: "Inter";
   font-size: 16px;
   color: #9fa0a5;
+  padding-bottom: 10px;
 }
 
 .line-separator {
@@ -109,7 +107,10 @@
     max-width: 100%;
     font-size: 3vw;
   }
+  .items-container {
+    flex-direction: column;
+  }
   .card-item {
-    max-width: 90%;
+    width: 90vw;
   }
 }
