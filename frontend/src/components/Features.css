@@ -14,10 +14,11 @@
   font-family: "Amiri", serif;
   color: white;
   margin: 0px;
+  margin-bottom: 60px;
 }
 
 .skill-cards-container {
-  width: 90%;
+  width: 80%;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -26,15 +27,22 @@
 }
 
 .skill-card-item {
-  width: 25vw;
+  width: 20vw;
+}
+
+.skill-card-item img {
+  width: 100px;
+  height: 100px;
 }
 
 .skill-card-item-title h1 {
   font-size: 24px;
   color: #e1a87a;
+  margin: 30px;
 }
 
 .skill-card-item-description p {
+  max-height: 240px;
   font-size: 18px;
-  color: gray;
+  color: #e4e3d5;
 }

@@ -1,12 +1,11 @@
-import React from 'react';
+import React from "react";
 
 const Loader = () => {
   return (
     <div className="cards-container">
-      <h1>Latest Projects</h1>
-      <p>Loading...</p>
+      <h1>LOADING MY PROJECTS...</h1>
     </div>
-  )
-}
+  );
+};
 
 export default Loader;

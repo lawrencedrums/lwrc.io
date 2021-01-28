@@ -1,53 +1,64 @@
 /* https://codepen.io/abhishek747/pen/BbWKVa?editors=1100 */
 
-.cards-container {
+.projects-container {
   width: 100%;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   padding-bottom: 120px;
-  background-color: #F5F6F5;
+  background-color: #f5f6f5;
 }
 
-.cards-container h1 {
-  margin: 100px;
-  width: 80%;
-  font-size: 4vw;
-}
-
-.cards-container p {
-  margin: 100px;
-  font-family: 'Inter';
-  font-size: 3vw;
-}
-
-.project-cards {
+.projects-text-wrapper {
   width: 50vw;
-  height: 30vh;
+  margin-top: 120px;
+  margin-bottom: 60px;
+}
+
+.projects-title h1 {
+  font-size: 64px;
+  font-family: "Arimi", serif;
+}
+
+.projects-description p {
+  font-size: 20px;
+}
+
+.project-card {
+  width: 50vw;
+  height: 20vh;
   border-radius: 10px;
-  margin: 10px;
+  margin: 20px;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  background: black;
   box-shadow: 0 4px 4px 0px rgba(0, 0, 0, 0.3);
 }
 
-.card-image {
+.project-card-image {
   width: inherit;
   height: inherit;
   object-fit: cover;
-  transition: 0.4s;
+  transition: 0.2s;
 }
 
-.card-title {
+.project-card-title {
   position: absolute;
-  font-weight: bold;
-  font-size: 40px;
-  color: white; 
+  font-size: 36px;
+  font-family: "Amiri", serif;
+  color: white;
+  opacity: 0%;
+  transition: 0.2s;
 }
 
-.project-cards:hover .card-image{
-  transform: scale(1.08, 1.08);
+.project-card:hover .project-card-image {
+  transform: scale(1.05, 1.05);
+  opacity: 60%;
+}
+
+.project-card:hover .project-card-title {
+  opacity: 100%;
 }
