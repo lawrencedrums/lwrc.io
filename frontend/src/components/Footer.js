@@ -27,39 +27,46 @@ const Footer = () => {
 
   return (
     <div className="footer-container">
-      <div className="footer-text">
-        <h1>Born and bred in Hong Kong, now studying full-time in the UK.</h1>
-        <p>
-          Connect with me on{" "}
-          <a href={socialNetworks[0].link} rel="noreferrer" target="_blank">
-            LinkedIn
-          </a>{" "}
-          and{" "}
-          <a href={socialNetworks[2].link} rel="noreferrer" target="_blank">
-            Instagram
-          </a>
-          .
-        </p>
-        <p>
-          Subscribe and leave a comment on my{" "}
-          <a href={socialNetworks[1].link} rel="noreferrer" target="_blank">
-            YouTube
-          </a>{" "}
-          channel to really grab my attention.
-        </p>
+      <div className="banner-container">
+        <div className="banner-text">
+          <h1>Born and bred in Hong Kong, now studying full-time in the UK.</h1>
+          <h1>Looking forward to new challenges and advantures.</h1>
+        </div>
       </div>
-      <div className="line-separator" />
-      <div className="footer-socials">
-        {socialNetworks.map((socialNetwork) => (
-          <a
-            key={socialNetwork.link}
-            href={socialNetwork.link}
-            rel="noreferrer"
-            target="_blank"
-          >
-            <img src={socialNetwork.icon} alt="Failed to load" />
-          </a>
-        ))}
+      <div className="footer-socials-wrapper">
+        <div className="footer-text">
+          <p>
+            Connect with me on{" "}
+            <a href={socialNetworks[0].link} rel="noreferrer" target="_blank">
+              LinkedIn
+            </a>{" "}
+            and{" "}
+            <a href={socialNetworks[2].link} rel="noreferrer" target="_blank">
+              Instagram
+            </a>
+            .
+          </p>
+          <p>
+            Subscribe and leave a comment on my{" "}
+            <a href={socialNetworks[1].link} rel="noreferrer" target="_blank">
+              YouTube
+            </a>{" "}
+            channel to really grab my attention.
+          </p>
+        </div>
+        <div className="line-separator" />
+        <div className="footer-socials-icons">
+          {socialNetworks.map((socialNetwork) => (
+            <a
+              key={socialNetwork.link}
+              href={socialNetwork.link}
+              rel="noreferrer"
+              target="_blank"
+            >
+              <img src={socialNetwork.icon} alt="Failed to load" />
+            </a>
+          ))}
+        </div>
       </div>
     </div>
   );
