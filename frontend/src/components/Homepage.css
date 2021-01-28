@@ -16,7 +16,6 @@
   margin: 0;
 
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 
@@ -25,25 +24,18 @@
   background-attachment: fixed;
 }
 
-.home-title {
-  max-width: 1000px;
-  text-align: center;
-}
-
 .home-title h1 {
-  margin-bottom: 30px;
-  font-size: 4.5vw;
+  font-size: 76px;
+  font-family: "Lato", sans-serif;
   color: white;
   text-align: center;
-  font-family: "Lato", sans-serif;
 }
 
 .home-description p {
-  font-size: 2.5vw;
-  font-weight: bold;
-  text-align: center;
-  color: #ff8662;
+  font-size: 36px;
   font-family: "Inter", sans-serif;
+  color: #ff8662;
+  text-align: center;
 }
 
 /* .down-icon {
