@@ -1,0 +1,35 @@
+.intro-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f0f0f0;
+}
+
+.intro-image-container {
+  width: 320px;
+  height: 480px;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  margin: 50px;
+}
+
+.intro-text-wrapper {
+  width: 40vw;
+  text-align: left;
+  flex-direction: column;
+  margin: 50px;
+}
+
+.intro-title h1 {
+  line-height: 1.2;
+  font-size: 40px;
+  font-family: "Amiri", serif;
+}
+
+.intro-content p {
+  line-height: 1.5;
+  font-size: 18px;
+}

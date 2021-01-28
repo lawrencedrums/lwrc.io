@@ -4,8 +4,6 @@ import drumsPNG from "./media/grid-band-bro.png";
 import recordPNG from "./media/grid-Recording-bro.png";
 import studioPNG from "./media/grid-Architect-bro.png";
 
-// import recordingSVG, { ReactComponent as recordingSVG2 } from './media/recording-animate.svg'
-
 const cardItems = [
   {
     image: drumsPNG,
