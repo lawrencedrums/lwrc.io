@@ -16,7 +16,7 @@
   margin: 0;
 
   display: flex;
-  justify-content: left;
+  justify-content: center;
   align-items: center;
 
   background: url(./media/bg.jpg) center;
@@ -25,13 +25,16 @@
 }
 
 .home-text-wrapper {
-  text-align: center;
-  padding-left: 80px;
+  width: 100vw;
+  padding-left: 120px;
+  max-width: 1800px;
+  text-align: left;
 }
 
 .home-title h1 {
   margin: 0px;
-  font-size: 80px;
+  margin-bottom: -20px;
+  font-size: 100px;
   font-family: "Amiri", serif;
   color: white;
 }
@@ -43,10 +46,13 @@
 }
 
 @media screen and (orientation: portrait) {
+  .home-text-wrapper {
+    padding: 10px;
+  }
   .home-title h1 {
     font-size: 9vw;
   }
-  .home-title p {
+  .home-description p {
     font-size: 6vw;
   }
 }

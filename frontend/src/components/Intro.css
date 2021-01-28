@@ -33,3 +33,13 @@
   line-height: 1.5;
   font-size: 18px;
 }
+
+@media screen and (orientation: portrait) {
+  .intro-container {
+    flex-direction: column;
+  }
+
+  .intro-image-container {
+    width: 80vw;
+  }
+}
