@@ -31,12 +31,16 @@ const Features = () => {
   const cards = cardItems.map((item) => {
     return (
       <div key={item.title}>
-        <div className="card-items">
+        <div className="card-item">
           <div className="card-image-container">
-            <img className="card-item-image" src={item.image} alt="Failed to load."/>
+            <img
+              className="card-item-image"
+              src={item.image}
+              alt="Failed to load."
+            />
           </div>
-          <div className="card-item-title">{item.title}</div>
-          <div className="card-item-description">{item.description}</div>
+          <h1>{item.title}</h1>
+          <p>{item.description}</p>
         </div>
       </div>
     );
@@ -50,7 +54,13 @@ const Features = () => {
       </div>
       <div className="features-banner">
         <h1>Real drums. Real good.</h1>
-        <p>I bring the best sounding and feeling drums to your music, based on 10+ years of studio and live performance experiences.</p>
+        <div className="line-separator" />
+        <p>
+          Drums tuned to perfection, recorded with industry standard and most
+          innovative gears. I bring the best sounding and feeling drums to your
+          music, based on 10+ years of studio and live performance and
+          production experiences.
+        </p>
       </div>
       <div className="items-container">{cards}</div>
     </div>

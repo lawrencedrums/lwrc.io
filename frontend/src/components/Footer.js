@@ -51,7 +51,12 @@ const Footer = () => {
       <div className="line-separator" />
       <div className="footer-socials">
         {socialNetworks.map((socialNetwork) => (
-          <a href={socialNetwork.link} rel="noreferrer" target="_blank">
+          <a
+            key={socialNetwork.link}
+            href={socialNetwork.link}
+            rel="noreferrer"
+            target="_blank"
+          >
             <img src={socialNetwork.icon} alt="Failed to load" />
           </a>
         ))}
