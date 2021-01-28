@@ -1,31 +1,35 @@
 import React from "react";
 import "./Features.css";
 
-const cardItems = [
+const skillItems = [
   {
-    title: "Musicianship",
+    title: "MUSICIANSHIP",
     description:
-      "Whether it be Hip Hop, Rock, Metal, Pop, or Funk. Add some groove to your music.",
+      "Having performed and recorded in numerous genres, my drums are suitable for a wide range of music.",
   },
   {
-    title: "Sound Engineering",
+    title: "SOUND ENGINEERING",
     description:
-      "Need your music recorded, mixed, and mastered? Our producers have you covered.",
+      "Using industary standard and the most advanced tools, I can get the sound that's in your head.",
   },
   {
-    title: "Studio Design",
+    title: "STUDIO DESIGN",
     description:
-      "Recording studio acoustic treatment and design done with precision and care.",
+      "Recording studio acoustic treatment and design done with precision and an eye for details.",
   },
 ];
 
 const Features = () => {
-  const cards = cardItems.map((item) => {
+  const skillCards = skillItems.map((item) => {
     return (
       <div key={item.title}>
-        <div className="card-item">
-          <div className="card-item-title">{item.title}</div>
-          <div className="card-item-description">{item.description}</div>
+        <div className="skill-card-item">
+          <div className="skill-card-item-title">
+            <h1>{item.title}</h1>
+          </div>
+          <div className="skill-card-item-description">
+            <p>{item.description}</p>
+          </div>
         </div>
       </div>
     );
@@ -33,17 +37,10 @@ const Features = () => {
 
   return (
     <div className="features-container">
-      <div className="features-banner">
-        <span>Real drums. Real good.</span>
-        <div className="line-separator" />
-        <p>
-          Drums tuned to perfection, recorded with industry standard and most
-          innovative gears. I bring the best sounding and feeling drums to your
-          music, based on 10+ years of studio and live performance and
-          production experiences.
-        </p>
+      <div className="features-title">
+        <h1>Looking to take your music to the next level?</h1>
       </div>
-      <div className="items-container">{cards}</div>
+      <div className="skill-cards-container">{skillCards}</div>
     </div>
   );
 };
