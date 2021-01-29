@@ -24,7 +24,15 @@
   background-attachment: fixed;
 }
 
+.home-overlay {
+  width: inherit;
+  height: inherit;
+  background-color: rgb(0, 0, 0, 0.3);
+  position: absolute;
+}
+
 .home-text-wrapper {
+  position: relative;
   width: 100vw;
   padding-left: 100px;
   text-align: left;

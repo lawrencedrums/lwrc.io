@@ -28,6 +28,7 @@ const Footer = () => {
   return (
     <div className="footer-container">
       <div className="banner-container">
+        <div className="banner-overlay" />
         <div className="banner-text">
           <h1>Born and bred in Hong Kong, now studying full-time in the UK.</h1>
           <h1>Looking forward to new challenges and advantures.</h1>

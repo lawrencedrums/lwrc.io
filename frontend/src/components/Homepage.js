@@ -4,6 +4,7 @@ import "./Homepage.css";
 const Homepage = () => {
   return (
     <div className="homepage">
+      <div className="home-overlay" />
       <div className="home-text-wrapper">
         <div className="home-title">
           <h1>Lawrence Wong</h1>
