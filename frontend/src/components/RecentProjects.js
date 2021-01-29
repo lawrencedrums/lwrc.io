@@ -19,6 +19,7 @@ const RecentProjects = ({ isLoading, projects }) => {
           </p>
         </div>
       </div>
+
       {projects.map((project) => (
         <a key={project.id} href={project.url} rel="noreferrer" target="_blank">
           <div className="project-card">

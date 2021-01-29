@@ -10,7 +10,7 @@
 .intro-content-wrapper {
   width: 80vw;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
 }
 
@@ -44,8 +44,16 @@
   .intro-container {
     flex-direction: column;
   }
-
   .intro-image-container {
     width: 80vw;
+  }
+}
+
+@media only screen and (min-width: 1500px) {
+  .intro-content-wrapper {
+    max-width: 1200px;
+  }
+  .intro-text-wrapper {
+    width: 30vw;
   }
 }

@@ -53,7 +53,7 @@
   color: #e1a87a;
 }
 
-@media screen and (orientation: portrait) {
+@media only screen and (orientation: portrait) {
   .home-title h1 {
     font-size: 12vw;
   }
@@ -62,7 +62,7 @@
   }
 }
 
-@media screen and (min-width: 1500px) {
+@media only screen and (min-width: 1500px) {
   .home-text-wrapper {
     padding-left: 0px;
     max-width: 1500px;

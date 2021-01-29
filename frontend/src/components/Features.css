@@ -5,8 +5,8 @@
   align-items: center;
   flex-wrap: wrap;
   background-color: #1a1a1a;
-  padding-top: 150px;
-  padding-bottom: 50px;
+  padding-top: 200px;
+  padding-bottom: 100px;
 }
 
 .features-title h1 {
@@ -52,5 +52,17 @@
 @media screen and (orientation: portrait) {
   .skill-cards-container {
     flex-direction: column;
+  }
+}
+
+@media only screen and (min-width: 1500px) {
+  .features-container {
+    flex-direction: column;
+  }
+  .features-title h1 {
+    max-width: 1000px;
+  }
+  .skill-cards-container {
+    max-width: 1000px;
   }
 }

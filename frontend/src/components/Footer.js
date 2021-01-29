@@ -36,6 +36,7 @@ const Footer = () => {
       </div>
       <div className="footer-socials-wrapper">
         <div className="footer-text">
+          <h1>Want an encore?</h1>
           <p>
             Connect with me on{" "}
             <a href={socialNetworks[0].link} rel="noreferrer" target="_blank">
@@ -68,6 +69,10 @@ const Footer = () => {
             </a>
           ))}
         </div>
+      </div>
+      <div className="copyright-text">
+        <p>Lwrc.io</p>
+        <p>© 2021. Lawrence Wong.</p>
       </div>
     </div>
   );
