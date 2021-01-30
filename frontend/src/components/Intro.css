@@ -19,7 +19,14 @@
   height: 600px;
   display: flex;
   justify-content: center;
+  align-items: center;
+  object-fit: cover;
   overflow: hidden;
+}
+
+.intro-image-container img {
+  width: auto;
+  height: inherit;
 }
 
 .intro-text-wrapper {
