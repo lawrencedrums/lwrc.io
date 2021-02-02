@@ -14,4 +14,4 @@ RUN mkdir /django
 WORKDIR /django
 
 # Copy project code.
-COPY . /django/
+COPY /django/ /django/
