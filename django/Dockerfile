@@ -19,7 +19,7 @@ WORKDIR /django
 COPY . /django/
 
 # collect static files
-RUN python manage.py collectstatic --noinput
+RUN python3 manage.py collectstatic --noinput --clear
 
 # add and run as non-root user
 RUN useradd -m myuser
