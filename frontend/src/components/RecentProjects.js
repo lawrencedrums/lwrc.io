@@ -26,7 +26,7 @@ const RecentProjects = ({ isLoading, projects }) => {
             <img
               className="project-card-image"
               alt={project.description}
-              src={project.image}
+              src={project.image_url}
             />
             <div className="project-card-title">{project.title}</div>
           </div>

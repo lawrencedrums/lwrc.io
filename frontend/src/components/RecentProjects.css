@@ -59,17 +59,17 @@
   font-size: 36px;
   font-family: "Amiri", serif;
   color: white;
-  opacity: 0%;
+  opacity: 0;
   transition: 0.2s;
 }
 
 .project-card:hover .project-card-image {
   transform: scale(1.05, 1.05);
-  opacity: 60%;
+  opacity: 0.6;
 }
 
 .project-card:hover .project-card-title {
-  opacity: 100%;
+  opacity: 1;
 }
 
 @media only screen and (min-width: 1500px) {
