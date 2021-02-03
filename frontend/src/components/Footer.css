@@ -99,15 +99,16 @@ a:hover {
   color: #e4e3d5;
 }
 
-@media screen and (orientation: portrait) {
+@media only screen and (orientation: portrait) {
   .banner-text h1 {
-    font-size: 24px;
+    font-size: 28px;
   }
   .footer-text {
     width: 95vw;
   }
   .footer-text h1 {
     line-height: 1;
+    font-size: 48px;
   }
   .footer-socials-wrapper {
     width: 95vw;

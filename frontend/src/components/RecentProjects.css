@@ -20,7 +20,7 @@
   align-items: center;
   flex-wrap: wrap;
   flex-direction: column;
-  padding-bottom: 100px;
+  padding-bottom: 50px;
 }
 
 .projects-title h1 {
@@ -29,7 +29,6 @@
 }
 
 .projects-description p {
-  width: 40vw;
   font-size: 20px;
 }
 
@@ -70,6 +69,20 @@
 
 .project-card:hover .project-card-title {
   opacity: 1;
+}
+
+@media only screen and (orientation: portrait) {
+  .projects-text-wrapper {
+    width: 95vw;
+    margin: 10px;
+  }
+  .projects-title h1 {
+    font-size: 48px;
+  }
+  .project-card {
+    width: 95vw;
+    height: 16vh;
+  }
 }
 
 @media only screen and (min-width: 1500px) {

@@ -47,7 +47,7 @@
   font-size: 18px;
 }
 
-@media screen and (orientation: portrait) {
+@media only screen and (orientation: portrait) {
   .intro-container {
     padding-top: 100px;
     padding-bottom: 100px;
@@ -64,7 +64,7 @@
     margin: 5px;
   }
   .intro-title h1 {
-    font-size: 40px;
+    font-size: 48px;
   }
 }
 

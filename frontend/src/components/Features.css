@@ -59,9 +59,9 @@
   }
 }
 
-@media screen and (orientation: portrait) {
+@media only screen and (orientation: portrait) {
   .features-title h1 {
-    font-size: 40px;
+    font-size: 48px;
   }
 }
 
