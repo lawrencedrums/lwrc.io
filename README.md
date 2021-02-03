@@ -1,12 +1,9 @@
 # Personal Website / Portfolio by Lawrence Wong
 
-## My first fully self-taught webapp is almost live!
+## [Lwrc.io](https://lwrc.io)
 
-Very proud of what I've created thus far, really excited to add new features in the future!
+My first fully self-taught webapp is **live**!
 
-Built using:
+Very proud of what I've created thus far, really excited to add new features and projects in the future!
 
-- Python, Django, Django REST framework
-- React
-- PostgreSQL
-- Docker
+Frontend built with React, Hooks, hosted on Netlify. Backend powered by Dockerized Python with the Django REST framework and PostgreSQL, hosted on Heroku. AWS S3 for hosting image files.
