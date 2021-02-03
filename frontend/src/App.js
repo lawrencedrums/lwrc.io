@@ -13,8 +13,9 @@ const App = () => {
 
   const fetchData = async () => {
     const { data } = await axios.get(
-      "http://0.0.0.0:8000/recentprojects/?format=json"
+      "https://glacial-eyrie-77569.herokuapp.com/recentprojects/?format=json"
     );
+    console.log(data);
     setProjects(data);
     setIsLoading(false);
   };
