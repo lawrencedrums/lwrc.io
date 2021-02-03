@@ -51,8 +51,8 @@ CORS_ORIGIN_ALLOW_ALL = False
 CORS_ORIGIN_WHITELIST = (
     'http://localhost:3000',
     'http://localhost:8000',
-    'http://lwrc.io',
-    'http://www.lwrc.io',
+    'https://lwrc.io',
+    'https://www.lwrc.io',
 )
 
 ROOT_URLCONF = 'django_server.urls'
