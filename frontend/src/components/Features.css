@@ -50,8 +50,18 @@
 }
 
 @media screen and (orientation: portrait) {
+  .features-container {
+    padding-top: 100px;
+    padding-bottom: 0px;
+  }
   .skill-cards-container {
     flex-direction: column;
+  }
+}
+
+@media screen and (orientation: portrait) {
+  .features-title h1 {
+    font-size: 40px;
   }
 }
 

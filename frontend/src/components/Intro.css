@@ -49,10 +49,22 @@
 
 @media screen and (orientation: portrait) {
   .intro-container {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  .intro-content-wrapper {
     flex-direction: column;
   }
   .intro-image-container {
-    width: 80vw;
+    width: 95vw;
+    height: 30vh;
+  }
+  .intro-text-wrapper {
+    width: auto;
+    margin: 5px;
+  }
+  .intro-title h1 {
+    font-size: 40px;
   }
 }
 

@@ -54,8 +54,13 @@
 }
 
 @media only screen and (orientation: portrait) {
+  .home-text-wrapper {
+    padding-left: 10px;
+  }
   .home-title h1 {
     font-size: 12vw;
+    line-height: 1;
+    padding-bottom: 50px;
   }
   .home-description p {
     font-size: 6vw;

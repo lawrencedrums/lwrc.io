@@ -98,3 +98,18 @@ a:hover {
   line-height: 0.8;
   color: #e4e3d5;
 }
+
+@media screen and (orientation: portrait) {
+  .banner-text h1 {
+    font-size: 24px;
+  }
+  .footer-text {
+    width: 95vw;
+  }
+  .footer-text h1 {
+    line-height: 1;
+  }
+  .footer-socials-wrapper {
+    width: 95vw;
+  }
+}
