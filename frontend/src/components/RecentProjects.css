@@ -94,6 +94,9 @@
     max-width: 1000px;
     max-height: 280px;
   }
+  .project-card-title {
+    font-size: 18px;
+  }
   .projects-description p {
     max-width: 800px;
   }
