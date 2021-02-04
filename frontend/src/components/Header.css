@@ -1,11 +1,39 @@
 .header-container {
   width: 100vw;
-  height: 8vh;
+  height: 6vh;
   margin: 0px;
   z-index: 1;
 
   display: flex;
+  justify-content: center;
+  align-items: center;
 
   position: fixed;
-  background-color: rgb(0, 0, 0, 0.9);
+  background-color: rgb(0, 0, 0, 0.6);
+  backdrop-filter: blur(6px);
+}
+
+.header-content-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-title {
+  font-size: 36px;
+  position: absolute;
+  left: 200px;
+  color: white;
+  text-decoration: none;
+}
+
+.header-links {
+  font-size: 18px;
+  position: absolute;
+  right: 200px;
+  color: white;
+}
+
+.header-links span {
+  padding-right: 40px;
 }

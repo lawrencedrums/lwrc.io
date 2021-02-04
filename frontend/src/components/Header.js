@@ -4,10 +4,16 @@ import "./Header.css";
 const Header = () => {
   return (
     <div className="header-container">
-      <h1>Header here.</h1>
-      <span>Intro</span>
-      <span>Projects</span>
-      <span>Contact</span>
+      <div className="header-content-wrapper">
+        <a className="header-title" href="lwrc.io">
+          Lw.
+        </a>
+        <div className="header-links">
+          <span>About.</span>
+          <span>Projects.</span>
+          <span>Contact.</span>
+        </div>
+      </div>
     </div>
   );
 };

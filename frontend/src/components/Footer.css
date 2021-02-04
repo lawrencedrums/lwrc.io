@@ -8,11 +8,11 @@
   background: #1a1a1a;
 }
 
-a {
+.footer-container a {
   color: #e4e3d5;
 }
 
-a:hover {
+.footer-container a:hover {
   font-weight: bold;
   text-decoration: underline;
   text-decoration-color: #e1a87a;
@@ -112,5 +112,10 @@ a:hover {
   }
   .footer-socials-wrapper {
     width: 95vw;
+  }
+  .footer-socials-icons img {
+    width: 32px;
+    height: 32px;
+    margin: 8px;
   }
 }
