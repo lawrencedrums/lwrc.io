@@ -1,0 +1,11 @@
+.header-container {
+  width: 100vw;
+  height: 8vh;
+  margin: 0px;
+  z-index: 1;
+
+  display: flex;
+
+  position: fixed;
+  background-color: rgb(0, 0, 0, 0.9);
+}

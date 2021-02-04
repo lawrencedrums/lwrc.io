@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import "./App.css";
+import Header from "./components/Header.js";
 import Homepage from "./components/Homepage";
 import Intro from "./components/Intro";
 import Features from "./components/Features";
@@ -25,6 +26,7 @@ const App = () => {
 
   return (
     <div className="App">
+      <Header />
       <Homepage />
       <Intro />
       <Features />
