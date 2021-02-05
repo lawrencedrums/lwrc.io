@@ -11,7 +11,12 @@ const Header = () => {
         </a>
         <div className="header-links">
           <span>
-            <Link activeClass="active" to="homepage" spy={true} smooth={true}>
+            <Link
+              activeClass="active"
+              to="home-container"
+              spy={true}
+              smooth={true}
+            >
               Home.
             </Link>
           </span>
