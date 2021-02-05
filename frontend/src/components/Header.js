@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-scroll";
 import "./Header.css";
 
 const Header = () => {
@@ -9,9 +10,26 @@ const Header = () => {
           Lw.
         </a>
         <div className="header-links">
-          <span>About.</span>
-          <span>Projects.</span>
-          <span>Contact.</span>
+          <span>
+            <Link activeClass="active" to="homepage" spy={true} smooth={true}>
+              Home.
+            </Link>
+          </span>
+          <span>
+            <Link to="intro-container" spy={true} smooth={true}>
+              About.
+            </Link>
+          </span>
+          <span>
+            <Link to="projects-container" spy={true} smooth={true}>
+              Projects.
+            </Link>
+          </span>
+          <span>
+            <Link to="footer-container" spy={true} smooth={true}>
+              Contact.
+            </Link>
+          </span>
         </div>
       </div>
     </div>

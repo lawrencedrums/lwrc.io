@@ -4,7 +4,9 @@ import Loader from "./Loader.js";
 
 const RecentProjects = ({ isLoading, projects }) => {
   return isLoading ? (
-    <Loader />
+    <div className="projects-container">
+      <Loader />
+    </div>
   ) : (
     <div className="projects-container">
       <div className="projects-text-wrapper">
