@@ -24,12 +24,7 @@
 }
 
 .projects-title h1 {
-  font-size: 64px;
-  font-family: "Arimi", serif;
-}
-
-.projects-description p {
-  font-size: 20px;
+  color: black;
 }
 
 .project-card {

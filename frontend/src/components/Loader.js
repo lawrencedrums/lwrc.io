@@ -5,7 +5,7 @@ import "./RecentProjects.css";
 const Loader = () => {
   return (
     <div className="loader-container">
-      <h1 style={{ fontSize: "64px", fontFamily: "Arimi" }}>
+      <h1 style={{ fontSize: "50px", fontFamily: "Arimi", color: "black" }}>
         Loading Projects...
       </h1>
       <div className="loader-spinner">

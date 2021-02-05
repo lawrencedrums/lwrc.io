@@ -11,10 +11,7 @@
 
 .features-title h1 {
   width: 80vw;
-  font-size: 64px;
-  font-family: "Amiri", serif;
   line-height: 1.2;
-  color: white;
   margin: 0px;
   margin-bottom: 20px;
 }
@@ -38,14 +35,13 @@
 }
 
 .skill-card-item-title h1 {
-  font-size: 24px;
+  font-size: 28px;
   color: #e1a87a;
   margin: 30px;
 }
 
 .skill-card-item-description p {
   max-height: 240px;
-  font-size: 18px;
   color: #e4e3d5;
 }
 

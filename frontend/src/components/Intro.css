@@ -38,13 +38,11 @@
 
 .intro-title h1 {
   line-height: 1.2;
-  font-size: 50px;
-  font-family: "Amiri", serif;
+  color: black;
 }
 
 .intro-content p {
   line-height: 1.5;
-  font-size: 18px;
 }
 
 @media only screen and (orientation: portrait) {

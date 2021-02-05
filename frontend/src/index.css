@@ -8,6 +8,14 @@ body {
 
 body h1 {
   font-weight: normal;
+  font-size: 48px;
+  font-family: "Amiri", serif;
+  color: white;
+}
+
+body p {
+  font-size: 18px;
+  font-family: "poppins", sans-serif;
 }
 
 code {
