@@ -1,16 +1,16 @@
 import React from "react";
 import loader from "./media/loader.gif";
+import "./RecentProjects.css";
 
 const Loader = () => {
   return (
-    <div
-      style={{ marginTop: "100px", marginBottom: "100px" }}
-      className="cards-container"
-    >
-      <h1>LOADING MY PROJECTS...</h1>
+    <div className="loader-container">
+      <h1 style={{ fontSize: "64px", fontFamily: "Arimi" }}>
+        Loading Projects...
+      </h1>
       <div className="loader-spinner">
         <img
-          style={{ width: "64px", height: "64px" }}
+          style={{ width: "80px", height: "80px" }}
           src={loader}
           alt="loader"
         />
