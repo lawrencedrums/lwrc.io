@@ -1,21 +1,21 @@
-.intro-container {
+/* .intro-container {
   width: 100vw;
   height: 100vh;
   background: #f0f0f0;
-}
-
+} */
+/* 
 .intro-content-wrapper {
   width: 80vw;
-}
+} */
 
-.intro-image-container {
+/* .intro-image-container {
   width: 400px;
   height: 600px;
   object-fit: cover;
   overflow: hidden;
-}
+} */
 
-.intro-image-container img {
+/* .intro-image-container img {
   width: auto;
   height: inherit;
 }
@@ -34,7 +34,7 @@
 
 .intro-content p {
   line-height: 1.5;
-}
+} */
 
 @media only screen and (orientation: portrait) {
   .intro-container {
