@@ -44,11 +44,11 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-CORS_ORIGIN_ALLOW_ALL = os.environ.get('CORS_ORIGIN_ALLOW_ALL', default=False)
-CORS_ORIGIN_WHITELIST = (
+CORS_ALLOW_ALL_ORIGINS = os.environ.get('CORS_ALLOW_ALL_ORIGINS', default=False)
+CORS_ALLOWED_ORIGINS = [
     'https://lwrc.io',
     'https://www.lwrc.io',
-)
+]
 
 ROOT_URLCONF = 'django_server.urls'
 
