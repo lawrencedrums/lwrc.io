@@ -1,10 +1,10 @@
 import React from "react";
-import "./Features.css";
+import styled from "styled-components";
 import drumSVG from "./media/svg-drum.svg";
 import engineerSVG from "./media/svg-engineer.svg";
 import designSVG from "./media/svg-design.svg";
 
-const skillItems = [
+const itemContent = [
   {
     icon: drumSVG,
     title: "MUSICIANSHIP",
@@ -25,30 +25,76 @@ const skillItems = [
   },
 ];
 
+const Container = styled.div`
+  width: 100vw;
+  background-color: #1a1a1a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 5rem 0rem;
+
+  h1 {
+    width: 80vw;
+    line-height: 1.2;
+    margin-bottom: 100px;
+  }
+`;
+
+const CardList = styled.div`
+  width: 80vw;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background: #1a1a1a;
+
+  @media only screen and (orientation: portrait) {
+    flex-direction: column;
+  }
+`;
+
+const Item = styled.div`
+  width: 300px;
+  padding: 5rem 2rem;
+
+  img {
+    width: 100px;
+    height: 100px;
+  }
+
+  h2 {
+    font-family: "Amiri";
+    font-size: 28px;
+    font-weight: normal;
+    color: #e1a87a;
+  }
+
+  p {
+    max-height: 240px;
+    color: #e4e3d5;
+  }
+
+  @media only screen and (orientation: portrait) {
+    padding: 1rem 0rem;
+  }
+`;
+
 const Features = () => {
-  const skillCards = skillItems.map((item) => {
+  const listItems = itemContent.map((item) => {
     return (
-      <div key={item.title}>
-        <div className="skill-card-item">
-          <img src={item.icon} alt="Icon" />
-          <div className="skill-card-item-title">
-            <h1>{item.title}</h1>
-          </div>
-          <div className="skill-card-item-description">
-            <p>{item.description}</p>
-          </div>
-        </div>
-      </div>
+      <Item key={item.title}>
+        <img src={item.icon} alt="Icon" />
+        <h2>{item.title}</h2>
+        <p>{item.description}</p>
+      </Item>
     );
   });
 
   return (
-    <div className="features-container">
-      <div className="features-title">
-        <h1>For anyone looking to take their music to the next level.</h1>
-      </div>
-      <div className="skill-cards-container">{skillCards}</div>
-    </div>
+    <Container>
+      <h1>For anyone looking to take their music to the next level.</h1>
+      <CardList>{listItems}</CardList>
+    </Container>
   );
 };
 
