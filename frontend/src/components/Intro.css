@@ -1,25 +1,16 @@
 .intro-container {
   width: 100vw;
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background: #f0f0f0;
 }
 
 .intro-content-wrapper {
   width: 80vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .intro-image-container {
   width: 400px;
   height: 600px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   object-fit: cover;
   overflow: hidden;
 }
@@ -60,9 +51,6 @@
   .intro-text-wrapper {
     width: auto;
     margin: 5px;
-  }
-  .intro-title h1 {
-    font-size: 48px;
   }
 }
 

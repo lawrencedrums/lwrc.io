@@ -1,8 +1,5 @@
 .footer-container {
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   flex-wrap: wrap;
   flex-direction: column;
   background: #1a1a1a;
@@ -21,11 +18,6 @@
 .banner-container {
   width: 100vw;
   height: 40vh;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
   background: url(./media/bg-banner.jpg);
   background-size: cover;
   background-attachment: fixed;
@@ -48,10 +40,6 @@
 
 .footer-socials-wrapper {
   width: 50vw;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
 }
 
@@ -98,7 +86,6 @@
   }
   .footer-text h1 {
     line-height: 1;
-    font-size: 48px;
   }
   .footer-socials-wrapper {
     width: 95vw;

@@ -22,3 +22,20 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.home-container,
+.intro-container,
+.intro-content-wrapper,
+.intro-image-container,
+.features-container,
+.skill-cards-container,
+.projects-container,
+.projects-text-wrapper,
+.project-card,
+.footer-container,
+.banner-container,
+.footer-socials-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

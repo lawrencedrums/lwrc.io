@@ -1,8 +1,5 @@
 .features-container {
   width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   flex-wrap: wrap;
   background-color: #1a1a1a;
   padding-top: 200px;
@@ -18,9 +15,7 @@
 
 .skill-cards-container {
   width: 80vw;
-  display: flex;
   justify-content: space-evenly;
-  align-items: center;
   background: #1a1a1a;
   margin: 100px;
 }
@@ -45,19 +40,13 @@
   color: #e4e3d5;
 }
 
-@media screen and (orientation: portrait) {
+@media only screen and (orientation: portrait) {
   .features-container {
     padding-top: 100px;
     padding-bottom: 0px;
   }
   .skill-cards-container {
     flex-direction: column;
-  }
-}
-
-@media only screen and (orientation: portrait) {
-  .features-title h1 {
-    font-size: 48px;
   }
 }
 

@@ -15,10 +15,6 @@
   /* Remove any browser-default margins. */
   margin: 0;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
   background: url(./media/bg.jpg) center;
   background-size: cover;
   background-attachment: fixed;

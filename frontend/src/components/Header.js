@@ -31,7 +31,7 @@ const Header = () => {
             </Link>
           </span>
           <span>
-            <Link to="footer-container" spy={true} smooth={true}>
+            <Link to="footer-socials-wrapper" spy={true} smooth={true}>
               Contact.
             </Link>
           </span>
