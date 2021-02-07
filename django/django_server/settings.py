@@ -14,10 +14,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', default='foo')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = int(os.environ.get('DEBUG', default=0))
 
-ALLOWED_HOSTS = ['0.0.0.0',
-                 '127.0.0.1',
-                 'localhost',
-                 'glacial-eyrie-77569.herokuapp.com',]
+ALLOWED_HOSTS = ['glacial-eyrie-77569.herokuapp.com',]
 
 
 # Application definition
@@ -47,10 +44,8 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-CORS_ORIGIN_ALLOW_ALL = False
+CORS_ORIGIN_ALLOW_ALL = os.environ.get('CORS_ORIGIN_ALLOW_ALL', default=False)
 CORS_ORIGIN_WHITELIST = (
-    'http://localhost:3000',
-    'http://localhost:8000',
     'https://lwrc.io',
     'https://www.lwrc.io',
 )
