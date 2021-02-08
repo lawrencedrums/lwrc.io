@@ -1,40 +1,93 @@
 import React from "react";
-import "./RecentProjects.css";
+import styled from "styled-components";
 import Loader from "./Loader.js";
 
-const RecentProjects = ({ isLoading, projects }) => {
-  return isLoading ? (
-    <div className="projects-container">
-      <Loader />
-    </div>
-  ) : (
-    <div className="projects-container">
-      <div className="projects-text-wrapper">
-        <div className="projects-title">
-          <h1>My Latest Projects.</h1>
-        </div>
-        <div className="projects-description">
-          <p>
-            Solo in my room, with a band, in a stadium... I never took for
-            granted the amount of fun and unforgetable experiences I had working
-            on projects that I'm passionate about.
-          </p>
-        </div>
-      </div>
+const Container = styled.div`
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding: 5rem 0rem;
+  background-color: #f5f6f5;
+`;
 
+const TextWrapper = styled.div`
+  width: 95vw;
+  max-width: 900px;
+  padding-bottom: 2rem;
+
+  h1 {
+    color: black;
+  }
+`;
+
+const ProjectItem = styled.div`
+  width: 95vw;
+  max-width: 900px;
+  height: 25vh;
+  border-radius: 10px;
+  margin: 1rem 0rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background: black;
+  box-shadow: 0 4px 4px 0px rgba(0, 0, 0, 0.3);
+
+  img {
+    width: inherit;
+    height: inherit;
+    object-fit: cover;
+    transition: 0.2s;
+  }
+
+  h2 {
+    position: absolute;
+    font-weight: normal;
+    font-size: 36px;
+    font-family: "Amiri", serif;
+    color: rgb(255, 255, 255, 0);
+    transition: 0.2s;
+  }
+
+  :hover img {
+    transform: scale(1.05, 1.05);
+    opacity: 0.5;
+  }
+
+  :hover h2 {
+    color: rgb(255, 255, 255, 1);
+  }
+
+  @media only screen and (orientation: portrait) {
+    height: 15vh;
+  }
+`;
+
+const RecentProjects = ({ isLoading, projects }) => {
+  // Return Loading spinner if isLoading is True, show projects if False
+  return isLoading ? (
+    <Loader />
+  ) : (
+    <Container>
+      <TextWrapper>
+        <h1>My Latest Projects.</h1>
+        <p>
+          Solo in my room, with a band, in a stadium... I never took for granted
+          the amount of fun and unforgetable experiences I had working on
+          projects that I'm passionate about.
+        </p>
+      </TextWrapper>
       {projects.map((project) => (
         <a key={project.id} href={project.url} rel="noreferrer" target="_blank">
-          <div className="project-card">
-            <img
-              className="project-card-image"
-              alt={project.description}
-              src={project.image_url}
-            />
-            <div className="project-card-title">{project.title}</div>
-          </div>
+          <ProjectItem>
+            <img alt={project.description} src={project.image_url} />
+            <h2>{project.title}</h2>
+          </ProjectItem>
         </a>
       ))}
-    </div>
+    </Container>
   );
 };
 

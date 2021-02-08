@@ -1,21 +1,26 @@
 import React from "react";
+import styled from "styled-components";
 import loader from "./media/loader.gif";
-import "./RecentProjects.css";
+
+const Container = styled.div`
+  padding: 5rem 0rem;
+
+  h1 {
+    color: black;
+  }
+
+  img {
+    width: 80px;
+    height: 80px;
+  }
+`;
 
 const Loader = () => {
   return (
-    <div className="loader-container">
-      <h1 style={{ fontSize: "50px", fontFamily: "Arimi", color: "black" }}>
-        Loading Projects...
-      </h1>
-      <div className="loader-spinner">
-        <img
-          style={{ width: "80px", height: "80px" }}
-          src={loader}
-          alt="loader"
-        />
-      </div>
-    </div>
+    <Container>
+      <h1>Loading Projects...</h1>
+      <img src={loader} alt="loader" />
+    </Container>
   );
 };
 
