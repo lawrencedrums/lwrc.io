@@ -54,7 +54,7 @@ const TextWrapper = styled.div`
 
 const Intro = () => {
   return (
-    <Container>
+    <Container className="intro-container">
       <ContentWrapper>
         <ImageWrapper>
           <img src={introImage} alt="intro" />

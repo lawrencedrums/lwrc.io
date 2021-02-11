@@ -17,7 +17,7 @@ const Container = styled.div`
 
 const Loader = () => {
   return (
-    <Container>
+    <Container className="project-container">
       <h1>Loading Projects...</h1>
       <img src={loader} alt="loader" />
     </Container>

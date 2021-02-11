@@ -94,7 +94,7 @@ const Copyright = styled.div`
 
 const Footer = () => {
   return (
-    <Container>
+    <Container className="contact-container">
       <Content>
         {" "}
         <h1>Want an encore?</h1>

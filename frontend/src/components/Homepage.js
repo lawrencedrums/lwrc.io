@@ -49,7 +49,7 @@ const ContentWrapper = styled.div`
 
 const Homepage = () => {
   return (
-    <Container>
+    <Container className="home-container">
       <ContentWrapper>
         <h1>Lawrence Wong</h1>
         <p>Drummer / Sound Engineer / Developer</p>

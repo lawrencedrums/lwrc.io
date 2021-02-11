@@ -70,7 +70,7 @@ const RecentProjects = ({ isLoading, projects }) => {
   return isLoading ? (
     <Loader />
   ) : (
-    <Container>
+    <Container className="project-container">
       <TextWrapper>
         <h1>My Latest Projects.</h1>
         <p>

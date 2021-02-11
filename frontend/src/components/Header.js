@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-scroll";
-import "./Header.css";
 
 const Container = styled.div`
   width: 100vw;
@@ -20,6 +19,7 @@ const Container = styled.div`
 
   a {
     color: white;
+    text-decoration: none;
   }
 `;
 
@@ -40,14 +40,19 @@ const HeaderTitle = styled.div`
 `;
 
 const HeaderMenu = styled.div`
-  font-size: 18px;
+  font-size: 16px;
   position: absolute;
   right: 150px;
   color: white;
 
   span {
-    padding-right: 40px;
+    padding: 0px 6px;
+    margin-right: 20px;
     cursor: pointer;
+  }
+
+  span:hover {
+    border-top: 2px solid white;
   }
 `;
 
@@ -70,17 +75,17 @@ const Header = () => {
             </Link>
           </span>
           <span>
-            <Link to="IntroContainer" spy={true} smooth={true}>
+            <Link to="intro-container" spy={true} smooth={true}>
               About.
             </Link>
           </span>
           <span>
-            <Link to="ProjectContainer" spy={true} smooth={true}>
+            <Link to="project-container" spy={true} smooth={true}>
               Projects.
             </Link>
           </span>
           <span>
-            <Link to="footer-socials-wrapper" spy={true} smooth={true}>
+            <Link to="contact-container" spy={true} smooth={true}>
               Contact.
             </Link>
           </span>
