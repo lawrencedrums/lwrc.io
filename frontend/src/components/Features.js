@@ -55,7 +55,8 @@ const CardList = styled.div`
 
 const Item = styled.div`
   width: 300px;
-  padding: 5rem 2rem;
+  height: 300px;
+  padding: 2rem;
 
   img {
     width: 100px;
