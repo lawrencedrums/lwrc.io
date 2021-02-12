@@ -1,15 +1,16 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
+import StoreProductList from "./StoreProductList";
 
 const Store = () => {
-  const [storeItems, setStoreItems] = useState([]);
+  const [products, setProducts] = useState([]);
   const [isLoading, setIsLoading] = useState([true]);
 
   const fetchData = async () => {
     const { data } = await axios.get(
-      "https://glacial-eyrie-77569.herokuapp.com/recentprojects/?format=json"
+      "http://0.0.0.0:8000/storeproducts/?format=json"
     );
-    setStoreItems(data);
+    setProducts(data);
     setIsLoading(false);
   };
 
@@ -17,7 +18,7 @@ const Store = () => {
     fetchData();
   }, []);
 
-  return <div>It's Working!</div>;
+  return <StoreProductList isLoading={isLoading} products={products} />;
 };
 
 export default Store;
