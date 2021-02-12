@@ -57,6 +57,7 @@ const Item = styled.div`
   width: 300px;
   height: 300px;
   padding: 2rem;
+  align-items: center;
 
   img {
     width: 100px;
