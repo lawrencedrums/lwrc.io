@@ -23,7 +23,7 @@ const Container = styled.div`
   }
 `;
 
-const Content = styled.div`
+const ContentWrapper = styled.div`
   width: 95%;
   max-width: 900px;
   display: flex;
@@ -39,7 +39,7 @@ const HeaderTitle = styled.div`
   text-decoration: none;
 `;
 
-const HeaderMenu = styled.div`
+const HeaderNav = styled.div`
   font-size: 16px;
   position: absolute;
   right: 150px;
@@ -59,11 +59,11 @@ const HeaderMenu = styled.div`
 const Header = () => {
   return (
     <Container>
-      <Content>
+      <ContentWrapper>
         <HeaderTitle>
           <a href="lwrc.io">Lw.</a>
         </HeaderTitle>
-        <HeaderMenu>
+        <HeaderNav>
           <span>
             <Link
               activeClass="active"
@@ -71,26 +71,26 @@ const Header = () => {
               spy={true}
               smooth={true}
             >
-              Home.
+              Home
             </Link>
           </span>
           <span>
             <Link to="intro-container" spy={true} smooth={true}>
-              About.
+              About
             </Link>
           </span>
           <span>
             <Link to="project-container" spy={true} smooth={true}>
-              Projects.
+              Projects
             </Link>
           </span>
           <span>
             <Link to="contact-container" spy={true} smooth={true}>
-              Contact.
+              Contact
             </Link>
           </span>
-        </HeaderMenu>
-      </Content>
+        </HeaderNav>
+      </ContentWrapper>
     </Container>
   );
 };

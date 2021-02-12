@@ -42,7 +42,7 @@ const Container = styled.div`
   }
 `;
 
-const Content = styled.div`
+const ContentWrapper = styled.div`
   width: 95vw;
   max-width: 900px;
   display: flex;
@@ -95,7 +95,7 @@ const Copyright = styled.div`
 const Footer = () => {
   return (
     <Container className="contact-container">
-      <Content>
+      <ContentWrapper>
         {" "}
         <h1>Want an encore?</h1>
         <p>
@@ -133,7 +133,7 @@ const Footer = () => {
           <p>Lwrc.io</p>
           <p>© 2021. Lawrence Wong.</p>
         </Copyright>
-      </Content>
+      </ContentWrapper>
     </Container>
   );
 };

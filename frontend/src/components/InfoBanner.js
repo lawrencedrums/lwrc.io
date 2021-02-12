@@ -12,7 +12,7 @@ const Container = styled.div`
   background-attachment: fixed;
 `;
 
-const Content = styled.div`
+const ContentWrapper = styled.div`
   width: 95%
   max-width: 900px;
   display: flex;
@@ -29,7 +29,7 @@ const Content = styled.div`
 const ObjectivesBanner = () => {
   return (
     <Container>
-      <Content>
+      <ContentWrapper>
         <h1>
           Born and bred in Hong Kong, I will start studying MSc Computer Science
           at the University of Bath in September, 2021.
@@ -38,7 +38,7 @@ const ObjectivesBanner = () => {
           Now I'm teaching myself how to code and working on different projects
           that interest me.
         </h1>
-      </Content>
+      </ContentWrapper>
     </Container>
   );
 };
