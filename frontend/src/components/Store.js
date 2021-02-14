@@ -7,9 +7,7 @@ const Store = () => {
   const [isLoading, setIsLoading] = useState([true]);
 
   const fetchData = async () => {
-    const { data } = await axios.get(
-      "http://0.0.0.0:8000/storeproducts/?format=json"
-    );
+    const { data } = await axios.get("http://0.0.0.0:8000/storeproducts/");
     setProducts(data);
     setIsLoading(false);
   };
@@ -18,7 +16,11 @@ const Store = () => {
     fetchData();
   }, []);
 
-  return <StoreProductList isLoading={isLoading} products={products} />;
+  return (
+    <div className="store">
+      <StoreProductList isLoading={isLoading} products={products} />
+    </div>
+  );
 };
 
 export default Store;

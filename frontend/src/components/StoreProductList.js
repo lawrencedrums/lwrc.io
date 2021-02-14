@@ -7,7 +7,10 @@ const StoreProductList = ({ isLoading, products }) => {
     <div className="storefront">
       Products are here!
       {products.map((item) => (
-        <p>{item.title}</p>
+        <span key={item.id}>
+          <p>{item.title}</p>
+          <p>Catagory: {item.catagory}</p>
+        </span>
       ))}
     </div>
   );
