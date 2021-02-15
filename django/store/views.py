@@ -1,4 +1,3 @@
-from django.shortcuts import render, get_object_or_404
 from rest_framework import viewsets
 from rest_framework.response import Response
 from .models import Product
@@ -9,6 +8,7 @@ class ProductViewSet(viewsets.ReadOnlyModelViewSet):
     serializer_class = ProductSerializer
 
     def retrieve(self, request, *args, **kwargs):
-        product = Product.objects.filter(catagory=kwargs['pk'])
+        # If a param is given, search the database for a match in the title
+        product = Product.objects.filter(title__icontains=kwargs['pk'])
         serializer = ProductSerializer(product, many=True)
         return Response(serializer.data)

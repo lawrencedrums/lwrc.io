@@ -1,4 +1,6 @@
+import uuid
 from django.db import models
+from django.contrib.postgres.fields import ArrayField
 
 class Product(models.Model):
     title = models.CharField(max_length=100)
@@ -26,3 +28,14 @@ class Product(models.Model):
 
     def __str__(self):
         return self.title
+
+class Order(models.Model):
+    order_id = models.UUIDField(unique=True, primary_key=True, default=uuid.uuid4, editable=False)
+    email = models.EmailField(max_length=250, unique=True)
+    first_name = models.CharField(max_length=30)
+    last_name = models.CharField(max_length=30)
+    date = models.DateTimeField(auto_now=True)
+    ordered_items_id = ArrayField(models.IntegerField())
+
+    def __str__(self):
+        return self.email

@@ -1,11 +1,13 @@
 import React from "react";
+// import styled from "styled-components";
+import SearchBar from "./SearchBar";
 
 const StoreProductList = ({ isLoading, products }) => {
   return isLoading ? (
     <div className="storefront">Products did not load.</div>
   ) : (
     <div className="storefront">
-      Products are here!
+      <SearchBar />
       {products.map((item) => (
         <span key={item.id}>
           <p>{item.title}</p>
