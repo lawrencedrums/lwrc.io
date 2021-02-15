@@ -11,10 +11,17 @@ const StyledSearchBar = styled.div`
   }
 `;
 
-const SearchBar = ({ setPlaceholder, searchTerm, setSearchTerm }) => {
+const SearchBar = ({ setPlaceholder, searchQuery, setSearchQuery }) => {
   return (
     <StyledSearchBar>
-      <input type="text" id="searchBar" placeholder={setPlaceholder} name="s" />
+      <input
+        value={searchQuery}
+        onInput={(e) => setSearchQuery(e.target.value)}
+        type="text"
+        id="searchBar"
+        placeholder={setPlaceholder}
+        name="s"
+      />
     </StyledSearchBar>
   );
 };
