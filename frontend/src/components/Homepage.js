@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import bgImage from "./media/bg.jpg";
+import bgImage from "./media/bg.png";
 
 const Container = styled.div`
   width: 100vw;
@@ -9,7 +9,6 @@ const Container = styled.div`
   justify-content: center;
   background: url(${bgImage}) center;
   background-size: cover;
-  background-attachment: fixed;
 `;
 
 const ContentWrapper = styled.div`
