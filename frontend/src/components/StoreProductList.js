@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import styled from "styled-components";
 import SearchBar from "./SearchBar";
 
 const filterItems = (items, query) => {

@@ -26,6 +26,7 @@ const ProjectItem = styled.div`
   width: 95vw;
   max-width: 900px;
   height: 25vh;
+  max-height: 300px;
   border-radius: 10px;
   margin: 1rem 0rem;
   display: flex;
@@ -74,9 +75,10 @@ const RecentProjects = ({ isLoading, projects }) => {
       <TextWrapper>
         <h1>My Latest Projects.</h1>
         <p>
-          Solo in my room, with a band, in a stadium... I never took for granted
-          the amount of fun and unforgetable experiences I had working on
-          projects that I'm passionate about.
+          I'm always working on new projects/ideas that I'm passionate about.
+          Whether it be a solo drum cover, a full band performance, or a
+          personal coding project, these are the most rewarding experiences of
+          my life.
         </p>
       </TextWrapper>
       {projects.map((project) => (

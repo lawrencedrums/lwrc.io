@@ -61,16 +61,17 @@ const Intro = () => {
         </ImageWrapper>
         <TextWrapper>
           <h1>
-            My passion is music. <br></br>My focus is engineering.
+            My passion is music. <br></br>My focus is tech.
           </h1>
           <p>
-            I've played with and recorded many talented musicians in my 10+
-            years as a drummer and an audio engineer.
+            In my 10+ years as a drummer and sound engineer, I've played with
+            and produced many talented musicians and artists in Hong Kong, US,
+            UK, Canada, and Japan.
           </p>
           <p>
-            Always been obsessed and fascinated with tech, I will start my MSc
-            study in Computer Science at the University of Bath at the end of
-            2021.
+            I'm also an aspiring Software Engineer. Always been obsessed and
+            fascinated with tech, I will start my MSc study in Computer Science
+            at the University of Bath at the end of 2021.
           </p>
         </TextWrapper>
       </ContentWrapper>
