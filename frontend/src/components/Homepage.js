@@ -1,13 +1,13 @@
 import React from "react";
 import styled from "styled-components";
-import bgImage from "./media/bg.png";
+// import bgImage from "./media/bg.png";
 
 const Container = styled.div`
   width: 100vw;
   height: 100vh;
   display: flex;
   justify-content: center;
-  background: url(${bgImage}) center;
+  background: url(${(props) => props.backgroundPath}) center;
   background-size: cover;
 `;
 
@@ -46,12 +46,15 @@ const ContentWrapper = styled.div`
   }
 `;
 
-const Homepage = () => {
+const Homepage = ({ backgroundPath, title, desc }) => {
   return (
-    <Container className="home-container">
+    <Container
+      className="home-container"
+      backgroundPath={process.env.PUBLIC_URL + backgroundPath}
+    >
       <ContentWrapper>
-        <h1>Lawrence Wong</h1>
-        <p>Drummer / Sound Engineer / Developer</p>
+        <h1>{title}</h1>
+        <p>{desc}</p>
       </ContentWrapper>
     </Container>
   );

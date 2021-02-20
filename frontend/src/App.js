@@ -7,7 +7,7 @@ import Intro from "./components/Intro";
 import Features from "./components/Features";
 import RecentProjects from "./components/RecentProjects";
 import Footer from "./components/Footer";
-// import Store from "./components/Store";
+import Portfolio from "./components/Portfolio";
 
 const App = () => {
   const [projects, setProjects] = useState([]);
@@ -15,7 +15,7 @@ const App = () => {
 
   const fetchData = async () => {
     const { data } = await axios.get(
-      "https://glacial-eyrie-77569.herokuapp.com/recentprojects/?format=json"
+      "http://0.0.0.0:8000/recentprojects/?format=json"
     );
     setProjects(data);
     setIsLoading(false);
@@ -28,12 +28,16 @@ const App = () => {
   return (
     <Router>
       <Switch>
-        {/* <Route path="/store">
-          <Store />
-        </Route> */}
+        <Route path="/portfolio">
+          <Portfolio />
+        </Route>
         <Route path="/">
           <div className="App">
-            <Homepage />
+            <Homepage
+              backgroundPath={"bgMain.png"}
+              title={"Lawrence Wong"}
+              desc={"Drummer / Sound Engineer / Developer"}
+            />
             <Intro />
             <Features />
             <RecentProjects isLoading={isLoading} projects={projects} />
