@@ -22,7 +22,7 @@ const ContentWrapper = styled.div`
 
   h1 {
     margin: 0px;
-    font-size: 80px;
+    font-size: 54px;
   }
 
   p {

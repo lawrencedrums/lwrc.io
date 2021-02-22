@@ -3,11 +3,8 @@ import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import Homepage from "./components/Homepage";
-import Intro from "./components/Intro";
-import Features from "./components/Features";
 import RecentProjects from "./components/RecentProjects";
 import Footer from "./components/Footer";
-import Project from "./components/Project";
 
 const App = () => {
   const [projects, setProjects] = useState([]);
@@ -28,9 +25,9 @@ const App = () => {
   return (
     <Router>
       <Switch>
-        <Route path="/project">
+        {/* <Route path="/project">
           <Project />
-        </Route>
+        </Route> */}
         <Route path="/">
           <div className="App">
             <Homepage
@@ -38,8 +35,6 @@ const App = () => {
               title={"Lawrence Wong"}
               desc={"Drummer / Sound Engineer / Developer"}
             />
-            <Intro />
-            <Features />
             <RecentProjects isLoading={isLoading} projects={projects} />
             <Footer />
           </div>
