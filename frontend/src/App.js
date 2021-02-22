@@ -7,7 +7,7 @@ import Intro from "./components/Intro";
 import Features from "./components/Features";
 import RecentProjects from "./components/RecentProjects";
 import Footer from "./components/Footer";
-import Portfolio from "./components/Portfolio";
+import Project from "./components/Project";
 
 const App = () => {
   const [projects, setProjects] = useState([]);
@@ -28,8 +28,8 @@ const App = () => {
   return (
     <Router>
       <Switch>
-        <Route path="/portfolio">
-          <Portfolio />
+        <Route path="/project">
+          <Project />
         </Route>
         <Route path="/">
           <div className="App">
