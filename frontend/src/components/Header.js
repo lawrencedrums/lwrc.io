@@ -60,7 +60,7 @@ const Header = () => {
         </HeaderTitle>
         <HeaderNav>
           <NavLink exact={true} activeClassName="is-active" to="/">
-            PROJECT
+            PROJECTS
           </NavLink>
           <NavLink activeClassName="is-active" to="/about">
             ABOUT

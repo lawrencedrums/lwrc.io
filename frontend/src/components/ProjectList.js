@@ -10,11 +10,11 @@ const Container = styled.div`
 const CardList = styled.div`
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: left;
 `;
 
 const Item = styled.div`
-  width: 33.3vw;
+  width: 33.3333vw;
   height: 30vw;
   display: flex;
   justify-content: center;
@@ -32,7 +32,7 @@ const Item = styled.div`
   h1 {
     position: absolute;
     font-family: "Raleway";
-    font-size: 32px;
+    font-size: 28px;
     color: white;
     opacity: 0;
   }

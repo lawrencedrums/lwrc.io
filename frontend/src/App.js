@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import Header from "./components/Header";
+import About from "./components/About";
 import LandingPage from "./components/LandingPage";
 import Intro from "./components/Intro";
 import ProjectList from "./components/ProjectList";
@@ -28,9 +29,9 @@ const App = () => {
   return (
     <Router>
       <Switch>
-        {/* <Route path="/about">
+        <Route path="/about">
           <About />
-        </Route> */}
+        </Route>
         <Route path="/">
           <Header />
           <LandingPage />
