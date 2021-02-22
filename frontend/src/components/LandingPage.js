@@ -1,39 +1,38 @@
 import React from "react";
 import styled from "styled-components";
-// import bgImage from "./media/bg.png";
+import bgImage from "./media/bgMain.png";
 
 const Container = styled.div`
   width: 100vw;
+  max-wigth: 1400px;
   height: 100vh;
   display: flex;
-  justify-content: center;
-  background: url(${(props) => props.backgroundPath}) center;
-  background-size: cover;
+  background: rgb(20, 20, 20);
 `;
 
 const ContentWrapper = styled.div`
   width: inherit;
-  max-width: 1500px;
   display: flex;
   justify-content: center;
   flex-direction: column;
   text-align: left;
-  margin-left: 100px;
+  background: url(${bgImage}) center;
+  background-size: cover;
 
   h1 {
+    padding-left: 10rem;
     margin: 0px;
     font-size: 54px;
   }
 
   p {
+    padding-left: 10rem;
     margin: 0px;
     font-size: 24px;
     color: #e1a87a;
   }
 
   @media only screen and (orientation: portrait) {
-    margin-left: 10px;
-
     h1 {
       font-size: 12vw;
       line-height: 1;
@@ -46,18 +45,15 @@ const ContentWrapper = styled.div`
   }
 `;
 
-const Homepage = ({ backgroundPath, title, desc }) => {
+const LandingPage = () => {
   return (
-    <Container
-      className="home-container"
-      backgroundPath={process.env.PUBLIC_URL + backgroundPath}
-    >
+    <Container>
       <ContentWrapper>
-        <h1>{title}</h1>
-        <p>{desc}</p>
+        <h1>Lawrence Wong</h1>
+        <p>Drummer / Sound Engineer / Developer</p>
       </ContentWrapper>
     </Container>
   );
 };
 
-export default Homepage;
+export default LandingPage;

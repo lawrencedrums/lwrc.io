@@ -2,8 +2,11 @@ import axios from "axios";
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-import Homepage from "./components/Homepage";
-import RecentProjects from "./components/RecentProjects";
+import Header from "./components/Header";
+import LandingPage from "./components/LandingPage";
+import Intro from "./components/Intro";
+import ProjectList from "./components/ProjectList";
+import ActionCall from "./components/ActionCall";
 import Footer from "./components/Footer";
 
 const App = () => {
@@ -12,7 +15,7 @@ const App = () => {
 
   const fetchData = async () => {
     const { data } = await axios.get(
-      "http://0.0.0.0:8000/recentprojects/?format=json"
+      "http://0.0.0.0:8000/projects/?format=json"
     );
     setProjects(data);
     setIsLoading(false);
@@ -25,19 +28,16 @@ const App = () => {
   return (
     <Router>
       <Switch>
-        {/* <Route path="/project">
-          <Project />
+        {/* <Route path="/about">
+          <About />
         </Route> */}
         <Route path="/">
-          <div className="App">
-            <Homepage
-              backgroundPath={"bgMain.png"}
-              title={"Lawrence Wong"}
-              desc={"Drummer / Sound Engineer / Developer"}
-            />
-            <RecentProjects isLoading={isLoading} projects={projects} />
-            <Footer />
-          </div>
+          <Header />
+          <LandingPage />
+          <Intro />
+          <ProjectList isLoading={isLoading} projects={projects} />
+          <ActionCall />
+          <Footer />
         </Route>
       </Switch>
     </Router>

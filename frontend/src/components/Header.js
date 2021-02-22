@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Link } from "react-scroll";
+import { NavLink } from "react-router-dom";
 
 const Container = styled.div`
   width: 100vw;
@@ -13,10 +13,6 @@ const Container = styled.div`
   align-items: center;
   position: fixed;
 
-  background-color: rgb(0, 0, 0, 0.5);
-  backdrop-filter: blur(6px);
-  border-bottom: 1px solid rgb(150, 150, 150, 0.5);
-
   a {
     color: white;
     text-decoration: none;
@@ -25,7 +21,6 @@ const Container = styled.div`
 
 const ContentWrapper = styled.div`
   width: 95%;
-  max-width: 900px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -45,14 +40,14 @@ const HeaderNav = styled.div`
   right: 150px;
   color: white;
 
-  span {
-    padding: 0px 6px;
+  a {
+    padding: 2px 5px;
     margin-right: 20px;
-    cursor: pointer;
   }
 
-  span:hover {
-    border-top: 2px solid white;
+  a.is-active {
+    font-weight: bold;
+    border-bottom: 1px solid #e1a87a;
   }
 `;
 
@@ -64,31 +59,12 @@ const Header = () => {
           <a href="lwrc.io">Lw.</a>
         </HeaderTitle>
         <HeaderNav>
-          <span>
-            <Link
-              activeClass="active"
-              to="home-container"
-              spy={true}
-              smooth={true}
-            >
-              Home
-            </Link>
-          </span>
-          <span>
-            <Link to="intro-container" spy={true} smooth={true}>
-              About
-            </Link>
-          </span>
-          <span>
-            <Link to="project-container" spy={true} smooth={true}>
-              Projects
-            </Link>
-          </span>
-          <span>
-            <Link to="contact-container" spy={true} smooth={true}>
-              Contact
-            </Link>
-          </span>
+          <NavLink exact={true} activeClassName="is-active" to="/">
+            PROJECT
+          </NavLink>
+          <NavLink activeClassName="is-active" to="/about">
+            ABOUT
+          </NavLink>
         </HeaderNav>
       </ContentWrapper>
     </Container>

@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import linkedinIcon from "./media/icon-linkedin.png";
 import youtubeIcon from "./media/icon-youtube.png";
-import instagramIcon from "./media/icon-instagram.png";
 import githubIcon from "./media/icon-github.png";
 
 const socialNetworks = [
@@ -15,10 +14,6 @@ const socialNetworks = [
     icon: youtubeIcon,
   },
   {
-    link: "https://www.instagram.com/okaylaw",
-    icon: instagramIcon,
-  },
-  {
     link: "https://github.com/lawrencedrums",
     icon: githubIcon,
   },
@@ -26,20 +21,9 @@ const socialNetworks = [
 
 const Container = styled.div`
   width: 100vw;
-  padding: 5rem 0rem 0rem 0rem;
   display: flex;
   justify-content: center;
   background: #1a1a1a;
-
-  a {
-    color: #e4e3d5;
-  }
-
-  a:hover {
-    font-weight: bold;
-    text-decoration: underline;
-    text-decoration-color: #e1a87a;
-  }
 `;
 
 const ContentWrapper = styled.div`
@@ -47,24 +31,15 @@ const ContentWrapper = styled.div`
   max-width: 900px;
   display: flex;
   align-items: center;
-  flex-direction: column;
-
-  h1 {
-    padding-bottom: 2rem;
-  }
-  p {
-    color: white;
-    line-height: 1.5;
-  }
 `;
 
 const SocialIcons = styled.div`
   width: inherit;
-  margin: 40px;
+  margin: 20px;
 
   img {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     margin: 10px;
   }
 
@@ -73,17 +48,8 @@ const SocialIcons = styled.div`
   }
 `;
 
-const LineSeperator = styled.div`
-  width: 50%;
-  padding: 2rem 3rem 0rem 0rem;
-  border-bottom: solid 2px;
-  position: relative;
-  border-color: white;
-`;
-
 const Copyright = styled.div`
   width: inherit;
-  padding-top: 4rem;
 
   p {
     font-size: 14px;
@@ -96,27 +62,6 @@ const Footer = () => {
   return (
     <Container className="contact-container">
       <ContentWrapper>
-        {" "}
-        <h1>Want an encore?</h1>
-        <p>
-          Connect with me on{" "}
-          <a href={socialNetworks[0].link} rel="noreferrer" target="_blank">
-            LinkedIn
-          </a>{" "}
-          and{" "}
-          <a href={socialNetworks[2].link} rel="noreferrer" target="_blank">
-            Instagram
-          </a>
-          .
-        </p>
-        <p>
-          Subscribe and leave a comment on my{" "}
-          <a href={socialNetworks[1].link} rel="noreferrer" target="_blank">
-            YouTube
-          </a>{" "}
-          channel to really grab my attention.
-        </p>
-        <LineSeperator />
         <SocialIcons>
           {socialNetworks.map((socialNetwork) => (
             <a
@@ -130,8 +75,7 @@ const Footer = () => {
           ))}
         </SocialIcons>
         <Copyright>
-          <p>Lwrc.io</p>
-          <p>© 2021. Lawrence Wong.</p>
+          <p>© 2021 Lawrence Wong. Made in HK.</p>
         </Copyright>
       </ContentWrapper>
     </Container>
