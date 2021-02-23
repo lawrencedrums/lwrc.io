@@ -1,1 +1,1 @@
-frontend/src/components/media/** filter=lfs diff=lfs merge=lfs -text
+frontend/public/media/** filter=lfs diff=lfs merge=lfs -text

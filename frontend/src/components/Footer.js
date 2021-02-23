@@ -1,21 +1,21 @@
 import React from "react";
 import styled from "styled-components";
-import linkedinIcon from "./media/icon-linkedin.png";
-import youtubeIcon from "./media/icon-youtube.png";
-import githubIcon from "./media/icon-github.png";
 
 const socialNetworks = [
   {
+    title: "LinkedIn",
     link: "https://www.linkedin.com/in/lawrence-wong-271157173/",
-    icon: linkedinIcon,
+    icon: process.env.PUBLIC_URL + "/media/icon-linkedin.png",
   },
   {
+    title: "YouTube",
     link: "https://www.youtube.com/channel/UCMJyv6Z5PhGUkm-SJjZCp4g",
-    icon: youtubeIcon,
+    icon: process.env.PUBLIC_URL + "/media/icon-youtube.png",
   },
   {
+    title: "GitHub",
     link: "https://github.com/lawrencedrums",
-    icon: githubIcon,
+    icon: process.env.PUBLIC_URL + "/media/icon-github.png",
   },
 ];
 
@@ -71,7 +71,7 @@ const Footer = () => {
               rel="noreferrer"
               target="_blank"
             >
-              <img src={socialNetwork.icon} alt="Failed to load" />
+              <img src={socialNetwork.icon} alt={socialNetwork.title} />
             </a>
           ))}
         </SocialIcons>

@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import bgImage from "./media/bgMain.png";
 
 const Container = styled.div`
   width: 100vw;
@@ -16,7 +15,7 @@ const ContentWrapper = styled.div`
   justify-content: center;
   flex-direction: column;
   text-align: left;
-  background: url(${bgImage}) center;
+  background: url(${process.env.PUBLIC_URL + "/media/bgMain.png"}) center;
   background-size: cover;
 
   h1 {
