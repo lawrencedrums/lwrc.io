@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import loader from "./media/loader.gif";
 
 const Container = styled.div`
   padding: 5rem 0rem;
@@ -19,7 +18,7 @@ const Loader = () => {
   return (
     <Container className="project-container">
       <h1>Loading Projects...</h1>
-      <img src={loader} alt="loader" />
+      <img src={process.env.PUBLIC_URL + "/media/loader.gif"} alt="loader" />
     </Container>
   );
 };
