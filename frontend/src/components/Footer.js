@@ -21,6 +21,7 @@ const socialNetworks = [
 
 const Container = styled.div`
   width: 100vw;
+  max-width: 100%;
   display: flex;
   justify-content: center;
   background: #1a1a1a;

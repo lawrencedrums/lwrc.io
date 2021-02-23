@@ -4,6 +4,7 @@ import { NavLink } from "react-router-dom";
 
 const Container = styled.div`
   width: 100vw;
+  max-width: 100%;
   height: 8vh;
   margin: 0px;
   z-index: 1;

@@ -4,7 +4,7 @@ import bgImage from "./media/bgMain.png";
 
 const Container = styled.div`
   width: 100vw;
-  max-wigth: 1400px;
+  max-width: 100%;
   height: 100vh;
   display: flex;
   background: rgb(20, 20, 20);

@@ -6,13 +6,14 @@ import Footer from "./Footer";
 
 const Container = styled.div`
   width: 100vw;
+  max-width: 100%;
   background: #2a2a2a;
 `;
 
 const ContentWrapper = styled.div`
   display: flex;
   justify-content: center;
-  padding: 12rem 12rem;
+  padding: 10rem 0rem;
   color: white;
 `;
 
@@ -24,8 +25,12 @@ const AboutText = styled.div`
   width: 30vw;
   text-align: left;
 
+  h1 {
+    margin-bottom: 3rem;
+  }
+
   p {
-    line-height: 1.5;
+    line-height: 1.8;
   }
 `;
 
@@ -34,7 +39,7 @@ const About = () => {
     <Container>
       <Header />
       <ContentWrapper>
-        <AboutImage>lalalalalalalal</AboutImage>
+        <AboutImage>(Imagine a photo of me)</AboutImage>
         <AboutText>
           <h1>
             Hi, I'm Lawrence. A Drummer, Sound Engineer, and Software Engineer

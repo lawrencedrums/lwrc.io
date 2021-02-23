@@ -4,6 +4,7 @@ import Loader from "./Loader";
 
 const Container = styled.div`
   width: 100vw;
+  max-width: 100%;
   background: #f0f0f0;
 `;
 
@@ -14,7 +15,7 @@ const CardList = styled.div`
 `;
 
 const Item = styled.div`
-  width: 33.3333vw;
+  width: 33.07vw;
   height: 30vw;
   display: flex;
   justify-content: center;

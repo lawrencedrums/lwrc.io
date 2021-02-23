@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 const Container = styled.div`
   width: 100vw;
+  max-width: 100%;
   padding: 6rem 0rem;
   display: flex;
   justify-content: center;
@@ -14,9 +15,9 @@ const ContentWrapper = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: column;
-  align-items: center;
 
   h1 {
+    margin-top: 0;
     color: black;
   }
 
