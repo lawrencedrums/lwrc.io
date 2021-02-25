@@ -16,7 +16,7 @@ const App = () => {
 
   const fetchData = async () => {
     const { data } = await axios.get(
-      "https://glacial-eyrie-77569.herokuapp.com/projects/?format=json"
+      "http://0.0.0.0:8000/projects/?format=json"
     );
     setProjects(data);
     setIsLoading(false);

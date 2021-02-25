@@ -11,11 +11,10 @@ const Container = styled.div`
 const CardList = styled.div`
   display: flex;
   flex-wrap: wrap;
-  justify-content: left;
 `;
 
 const Item = styled.div`
-  width: 33.07vw;
+  width: 32.98vw;
   height: 30vw;
   display: flex;
   justify-content: center;
