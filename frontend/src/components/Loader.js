@@ -23,11 +23,11 @@ const Loader = () => {
     );
   };
 
-  // Blame free tier Heroku after 10 seconds
+  // Blame free tier Heroku after 8 seconds
   useEffect(() => {
     setTimeout(() => {
       updateApology();
-    }, 10000);
+    }, 8000);
   }, []);
 
   return (

@@ -30,7 +30,9 @@ const App = () => {
     <Router>
       <Switch>
         <Route path="/about">
+          <Header />
           <About />
+          <Footer />
         </Route>
         <Route path="/">
           <Header />
