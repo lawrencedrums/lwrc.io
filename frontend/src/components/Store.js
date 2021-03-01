@@ -1,6 +1,25 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
+import styled from "styled-components";
+import Header from "./Header";
 import StoreProductList from "./StoreProductList";
+
+const Container = styled.div`
+  width: 100vw;
+  max-width: 100%;
+  background: #2a2a2a;
+`;
+
+const Content = styled.div`
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  sup {
+    font-size: 10px;
+  }
+`;
 
 const Store = () => {
   const [products, setProducts] = useState([]);
@@ -17,9 +36,15 @@ const Store = () => {
   }, []);
 
   return (
-    <div className="store">
-      <StoreProductList isLoading={isLoading} products={products} />
-    </div>
+    <Container>
+      <Header />
+      <Content>
+        <h1>
+          Coming Soon<sup>TM</sup>
+        </h1>
+        {/* <StoreProductList isLoading={isLoading} products={products} /> */}
+      </Content>
+    </Container>
   );
 };
 

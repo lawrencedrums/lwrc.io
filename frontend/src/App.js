@@ -8,6 +8,7 @@ import LandingPage from "./components/LandingPage";
 import Intro from "./components/Intro";
 import ProjectList from "./components/ProjectList";
 import ActionCall from "./components/ActionCall";
+import Store from "./components/Store";
 import Footer from "./components/Footer";
 
 const App = () => {
@@ -33,6 +34,9 @@ const App = () => {
           <Header />
           <About />
           <Footer />
+        </Route>
+        <Route path="/store">
+          <Store />
         </Route>
         <Route path="/">
           <Header />
