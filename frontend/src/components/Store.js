@@ -13,12 +13,8 @@ const Container = styled.div`
 const Content = styled.div`
   height: 100vh;
   display: flex;
-  justify-content: center;
   align-items: center;
-
-  sup {
-    font-size: 10px;
-  }
+  flex-direction: column;
 `;
 
 const Store = () => {
@@ -39,10 +35,7 @@ const Store = () => {
     <Container>
       <Header />
       <Content>
-        <h1>
-          Coming Soon<sup>TM</sup>
-        </h1>
-        {/* <StoreProductList isLoading={isLoading} products={products} /> */}
+        <StoreProductList isLoading={isLoading} products={products} />
       </Content>
     </Container>
   );

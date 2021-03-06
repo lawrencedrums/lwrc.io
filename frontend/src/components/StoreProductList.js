@@ -1,5 +1,14 @@
 import React, { useState } from "react";
 import SearchBar from "./SearchBar";
+import Styled from "styled-components";
+
+const Container = Styled.div`
+  width: 100vw;
+
+  p {
+    color: white;
+  }
+`;
 
 const filterItems = (items, query) => {
   // Filter tilte of items fetched from API base on query input
@@ -8,7 +17,7 @@ const filterItems = (items, query) => {
   }
   return items.filter((item) => {
     const itemTitle = item.title.toLowerCase();
-    return itemTitle.includes(query);
+    return itemTitle.includes(query.toLowerCase());
   });
 };
 
@@ -17,9 +26,9 @@ const StoreProductList = ({ isLoading, products }) => {
   const filtedItems = filterItems(products, searchQuery);
 
   return isLoading ? (
-    <div className="storefront">Products did not load.</div>
+    <Container>Products did not load.</Container>
   ) : (
-    <div className="storefront">
+    <Container>
       <SearchBar
         setPlaceholder="Periphery, Veil of Maya, Erra..."
         searchQuery={searchQuery}
@@ -28,10 +37,9 @@ const StoreProductList = ({ isLoading, products }) => {
       {filtedItems.map((item) => (
         <span key={item.id}>
           <p>{item.title}</p>
-          <p>Catagory: {item.catagory}</p>
         </span>
       ))}
-    </div>
+    </Container>
   );
 };
 
