@@ -16,6 +16,7 @@ def get_secret(setting, secrets=secrets):
         raise ImproperlyConfigured("Set the {} setting".format(setting))
 
 SECRET_KEY = get_secret('SECRET_KEY')
+STRIPE_TEST_SECRET_KEY = get_secret('STRIPE_TEST_SECRET_KEY')
 
 DEBUG = True
 

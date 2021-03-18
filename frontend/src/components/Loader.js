@@ -19,7 +19,7 @@ const Loader = () => {
 
   const updateApology = () => {
     setApology(
-      "(Please bear with me, I am only using the free tier on Heroku for this."
+      "(Please bear with me, I am only using the free tier on Heroku for this.)"
     );
   };
 

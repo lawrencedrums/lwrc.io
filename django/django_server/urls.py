@@ -3,13 +3,14 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 from rest_framework import routers
-from project_api.views import ProjectViewSet, RecentProjectViewSet
-from store.views import ProductViewSet
+from project_api.views import ProjectViewSet
+from store.views import ProductViewSet, OrderViewSet
 
 router = routers.DefaultRouter()
 router.register('projects', ProjectViewSet)
-router.register('recentprojects', RecentProjectViewSet)
 router.register('storeproducts', ProductViewSet)
+router.register('orders', OrderViewSet)
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
