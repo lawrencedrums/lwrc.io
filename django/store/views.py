@@ -25,7 +25,7 @@ class OrderViewSet(viewsets.ReadOnlyModelViewSet):
 
 class CheckoutSessionView(View):
     def post(self, request, *args, **kwargs):
-        YOUR_DOMAIN = "http://0.0.0.0:8000"
+        YOUR_DOMAIN = "http://localhost:3000/"
         checkout_session = stripe.checkout.Session.create(
             payment_method_types=['card'],
             line_items=[
