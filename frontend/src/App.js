@@ -9,6 +9,7 @@ import Intro from "./components/Intro";
 import ProjectList from "./components/ProjectList";
 import ActionCall from "./components/ActionCall";
 import Store from "./components/Store";
+import Checkout from "./components/Checkout";
 import Footer from "./components/Footer";
 
 const App = () => {
@@ -37,6 +38,9 @@ const App = () => {
         </Route>
         <Route path="/store">
           <Store />
+        </Route>
+        <Route path="/checkout">
+          <Checkout />
         </Route>
         <Route path="/">
           <Header />
