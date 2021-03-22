@@ -12,6 +12,9 @@ import Store from "./components/Store";
 import Checkout from "./components/Checkout";
 import Footer from "./components/Footer";
 
+axios.defaults.xsrfHeaderName = "X-CSRFTOKEN";
+axios.defaults.xsrfCookieName = "csrftoken";
+
 const App = () => {
   const [projects, setProjects] = useState([]);
   const [isLoading, setIsLoading] = useState([true]);
