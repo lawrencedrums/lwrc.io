@@ -8,10 +8,13 @@ const Checkout = () => {
   );
 
   const handleClick = async () => {
-    // const csrftoken = getCookie("csrftoken");
     const stripe = await stripePromise;
     const response = await axios.post(
-      "http://0.0.0.0:8000/create-checkout-session/"
+      "http://0.0.0.0:8000/create-checkout-session/",
+      {
+        title: "Periphery - Lune (Drums Transcription)",
+        price: 3.99,
+      }
     );
 
     const session = await response.data;

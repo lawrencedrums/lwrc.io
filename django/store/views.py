@@ -1,4 +1,5 @@
 import stripe
+import json
 from rest_framework import viewsets
 from rest_framework.response import Response
 from django.conf import settings
@@ -25,6 +26,7 @@ class OrderViewSet(viewsets.ReadOnlyModelViewSet):
 
 class CheckoutSessionView(View):
     def post(self, request, *args, **kwargs):
+        checkout_detail = json.loads(request.body)
         YOUR_DOMAIN = "http://localhost:3000/"
         checkout_session = stripe.checkout.Session.create(
             payment_method_types=['card'],
@@ -32,9 +34,9 @@ class CheckoutSessionView(View):
                 {
                     'price_data': {
                         'currency': 'usd',
-                        'unit_amount': 2000,
+                        'unit_amount': int(checkout_detail['price']*100),
                         'product_data': {
-                            'name': 'Stubborn Attachments',
+                            'name': checkout_detail['title'],
                             'images': ['https://i.imgur.com/EHyR2nP.png'],
                         },
                     },
