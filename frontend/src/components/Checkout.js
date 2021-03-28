@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import { loadStripe } from "@stripe/stripe-js";
 
 const Checkout = () => {
+  const [order, setOrder] = useState([]);
+
   const stripePromise = loadStripe(
     "pk_test_51IKuryF3m9OLgSX0uMv3hp56aXf0wrTH7OO8xubO0Z3wTSNmZEGeKtrRyMm8lVjt4Js41dG36Egrs5O4VZzqtKte00Yb8Il71G"
   );
@@ -12,8 +14,7 @@ const Checkout = () => {
     const response = await axios.post(
       "http://0.0.0.0:8000/create-checkout-session/",
       {
-        title: "Periphery - Lune (Drums Transcription)",
-        price: 3.99,
+        id: 3,
       }
     );
 
