@@ -14,6 +14,8 @@ const Container = styled.div`
   align-items: center;
   position: fixed;
 
+  backdrop-filter: blur(6px);
+
   a {
     color: white;
     text-decoration: none;
