@@ -14,7 +14,7 @@ const Checkout = () => {
     const response = await axios.post(
       "http://0.0.0.0:8000/create-checkout-session/",
       {
-        id: 3,
+        id: [3, 2],
       }
     );
 

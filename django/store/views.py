@@ -10,6 +10,31 @@ from .serializers import ProductSerializer, OrderSerializer
 
 stripe.api_key = settings.STRIPE_TEST_SECRET_KEY
 
+def calculate_total_price(product_id_list):
+    # Calculate total price in an order
+    total_price = 0
+    for product_id in product_id_list:  # for every id in the order
+        current_product = Product.objects.get(id=product_id) # fetch the details of the item
+        total_price += current_product.price*100    # get the item's price, add it to total
+    return int(total_price)
+
+def get_order_items(product_id_list):
+    # Get a string of all items in an order
+    order_items = ""
+    for idx, product_id in enumerate(product_id_list):
+        current_product = Product.objects.get(id=product_id)
+        order_items += current_product.title
+        if idx + 1 != len(product_id_list):
+            order_items += ", "
+        else:
+            order_items += "."
+    return order_items
+
+def get_item_image_url(product_id_list):
+    # Get the image_url of the first item in an order
+    first_item = Product.objects.get(id=product_id[0])
+    return first_item.image_url
+
 class ProductViewSet(viewsets.ReadOnlyModelViewSet):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
@@ -27,18 +52,17 @@ class OrderViewSet(viewsets.ReadOnlyModelViewSet):
 class CheckoutSessionView(View):
     def post(self, request, *args, **kwargs):
         YOUR_DOMAIN = "http://localhost:3000"
-        # Convert json to a python object
-        order = json.loads(request.body)
-        product = Product.objects.get(id=order['id'])
+        order = json.loads(request.body)    # Convert json to a python object
+        #product_id_list = Product.objects.get(id=order['id'])
         checkout_session = stripe.checkout.Session.create(
             payment_method_types=['card'],
             line_items=[
                 {
                     'price_data': {
                         'currency': 'usd',
-                        'unit_amount': int(product.price*100),
+                        'unit_amount': calculate_total_price(order['id']),
                         'product_data': {
-                            'name': product.title,
+                            'name': get_order_items(order['id']),
                             'images': ['https://i.imgur.com/EHyR2nP.png'],
                         },
                     },
