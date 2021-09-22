@@ -7,7 +7,6 @@ import About from "./components/About";
 import LandingPage from "./components/LandingPage";
 import Intro from "./components/Intro";
 import ProjectList from "./components/ProjectList";
-import ActionCall from "./components/ActionCall";
 import Store from "./components/Store";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
@@ -45,7 +44,6 @@ const App = () => {
             <LandingPage />
             <Intro />
             <ProjectList isLoading={isLoading} projects={projects} />
-            <ActionCall />
             <Footer />
           </Route>
         </Switch>
