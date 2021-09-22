@@ -37,13 +37,15 @@ const Intro = () => {
       <ContentWrapper>
         <h1>Hey there, I'm Lawrence.</h1>
         <p>
-          In my 10+ years of being a drummer sound engineer, I've played with
-          and produced many talented artists from Hong Kong, US, and more.
+          Currently, I'm a MSc Computer Science student studying in the
+          University of Bath. I'm also working a few personal projects, as well
+          as actively looking for my first job in the industry.
         </p>
         <p>
-          Currently, I'm an aspiring Software Engineer working on some personal
-          projects. At the end of 2021, I will start my study in MSc Computer
-          Science at the University of Bath.
+          In my 10+ years of being a drummer and sound engineer, I've played
+          with and produced many talented musicians from Hong Kong, US, and
+          more. My experience allows me to solve problems with a creative and
+          methodical approach.
         </p>
       </ContentWrapper>
     </Container>

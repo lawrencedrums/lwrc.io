@@ -63,7 +63,7 @@ const About = () => {
             developed as a music producer and sound engineer. There's no doubt
             in my mind that I made the right decision to learn programming. I'm
             eager to see where this decision would take me in the future. Now,
-            I'm a self-taught, aspiring Software Engineer who can't stop
+            I'm a CS student and an aspiring Software Engineer who can't stop
             learning and building.
           </p>
         </AboutText>
