@@ -3,12 +3,42 @@ import SearchBar from "./SearchBar";
 import Styled from "styled-components";
 import axios from "axios";
 import { loadStripe } from "@stripe/stripe-js";
+import styled from "styled-components";
 
 const Container = Styled.div`
   width: 100vw;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
 
   p {
     color: white;
+  }
+`;
+
+const ContentWrapper = styled.div`
+  width: 75vw;
+`;
+
+const ItemCards = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+`;
+
+const StoreItem = styled.div`
+  width: 25vw;
+  height: 30vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: #2a2a2a;
+
+  img {
+    width: 22vw;
+    height: 22vw;
+    object-fit: cover;
   }
 `;
 
@@ -61,19 +91,31 @@ const StoreProductList = ({ isLoading, products }) => {
     <Container>Products did not load.</Container>
   ) : (
     <Container>
-      <SearchBar
-        setPlaceholder="Periphery, Veil of Maya, Erra..."
-        searchQuery={searchQuery}
-        setSearchQuery={setSearchQuery}
-      />
-      {filtedItems.map((item) => (
-        <span key={item.id}>
-          <p>{item.title}</p>
-          <button type="button" id={item.id} role="link" onClick={handleClick}>
-            Quick buy
-          </button>
-        </span>
-      ))}
+      <ContentWrapper>
+        <SearchBar
+          setPlaceholder="Periphery, Veil of Maya, Erra..."
+          searchQuery={searchQuery}
+          setSearchQuery={setSearchQuery}
+        />
+        <ItemCards>
+          {filtedItems.map((item) => (
+            <StoreItem>
+              <img alt={item.title} src={item.image_url} />
+              <p>
+                {item.title} : ${item.price}
+              </p>
+              <button
+                type="button"
+                id={item.id}
+                role="link"
+                onClick={handleClick}
+              >
+                Quick buy
+              </button>
+            </StoreItem>
+          ))}
+        </ItemCards>
+      </ContentWrapper>
     </Container>
   );
 };

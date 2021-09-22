@@ -7,11 +7,11 @@ import StoreProductList from "./StoreProductList";
 const Container = styled.div`
   width: 100vw;
   max-width: 100%;
+  min-height: 100vh;
   background: #2a2a2a;
 `;
 
 const Content = styled.div`
-  height: 100vh;
   display: flex;
   align-items: center;
   flex-direction: column;
