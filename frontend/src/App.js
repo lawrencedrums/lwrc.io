@@ -10,6 +10,7 @@ import ProjectList from "./components/ProjectList";
 import ActionCall from "./components/ActionCall";
 import Store from "./components/Store";
 import Footer from "./components/Footer";
+import ScrollToTop from "./components/ScrollToTop";
 
 const App = () => {
   const [projects, setProjects] = useState([]);
@@ -29,24 +30,26 @@ const App = () => {
 
   return (
     <Router>
-      <Switch>
-        <Route path="/about">
-          <Header />
-          <About />
-          <Footer />
-        </Route>
-        <Route path="/store">
-          <Store />
-        </Route>
-        <Route path="/">
-          <Header />
-          <LandingPage />
-          <Intro />
-          <ProjectList isLoading={isLoading} projects={projects} />
-          <ActionCall />
-          <Footer />
-        </Route>
-      </Switch>
+      <ScrollToTop>
+        <Switch>
+          <Route path="/about">
+            <Header />
+            <About />
+            <Footer />
+          </Route>
+          <Route path="/store">
+            <Store />
+          </Route>
+          <Route path="/">
+            <Header />
+            <LandingPage />
+            <Intro />
+            <ProjectList isLoading={isLoading} projects={projects} />
+            <ActionCall />
+            <Footer />
+          </Route>
+        </Switch>
+      </ScrollToTop>
     </Router>
   );
 };
