@@ -32,8 +32,8 @@ def get_order_items(product_id_list):
 
 def get_item_image_url(product_id_list):
     # Get the image_url of the first item in an order
-    first_item = Product.objects.get(id=product_id[0])
-    return first_item.image_url
+    first_item = Product.objects.get(id=product_id_list[0])
+    return [first_item.image_url]
 
 class ProductViewSet(viewsets.ReadOnlyModelViewSet):
     queryset = Product.objects.all()
@@ -54,6 +54,7 @@ class CheckoutSessionView(View):
         YOUR_DOMAIN = "http://localhost:3000"
         order = json.loads(request.body)    # Convert json to a python object
         #product_id_list = Product.objects.get(id=order['id'])
+        print(get_item_image_url(order['id']))
         checkout_session = stripe.checkout.Session.create(
             payment_method_types=['card'],
             line_items=[
@@ -63,7 +64,7 @@ class CheckoutSessionView(View):
                         'unit_amount': calculate_total_price(order['id']),
                         'product_data': {
                             'name': get_order_items(order['id']),
-                            'images': ['https://i.imgur.com/EHyR2nP.png'],
+                            'images': get_item_image_url(order['id']),
                         },
                     },
                     'quantity': 1,
