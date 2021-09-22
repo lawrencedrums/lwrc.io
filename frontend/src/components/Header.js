@@ -59,7 +59,7 @@ const Header = () => {
     <Container>
       <ContentWrapper>
         <HeaderTitle>
-          <a href="lwrc.io">Lw.</a>
+          <a href="/">Lw.</a>
         </HeaderTitle>
         <HeaderNav>
           <NavLink exact={true} activeClassName="is-active" to="/">
