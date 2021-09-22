@@ -30,6 +30,7 @@ const Item = styled.div`
   }
 
   h1 {
+    width: 30vw;
     position: absolute;
     font-family: "Raleway";
     font-size: 28px;
