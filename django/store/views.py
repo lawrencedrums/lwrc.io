@@ -95,5 +95,15 @@ def stripe_webhook(request):
         # Invalid signature
         return HttpResponse(status=400)
 
+    # Handle the checkout.session.completed event
+    if event['type'] == 'checkout.session.completed':
+        session = event['data']['object']
+
+        # Fulfill the order
+        fulfill_order(session)
+
     # Passed signature verification
     return HttpResponse(status=200)
+
+def fulfill_order(session):
+    print("Session:", session)
