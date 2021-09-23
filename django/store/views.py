@@ -10,8 +10,7 @@ from .models import Product, Order
 from .serializers import ProductSerializer, OrderSerializer
 
 stripe.api_key = settings.STRIPE_TEST_SECRET_KEY
-
-endpoint_secret = "whsec_qq9HT8uTRbBWCla15okRGjSrSgZEEKVO"
+endpoint_secret = settings.ENDPOINT_SECRET
 
 def calculate_total_price(product_id_list):
     # Calculate total price in an order
