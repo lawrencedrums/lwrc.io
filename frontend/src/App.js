@@ -11,6 +11,7 @@ import ActionCall from "./components/ActionCall";
 import Store from "./components/Store";
 import Checkout from "./components/Checkout";
 import Footer from "./components/Footer";
+import PaymentSuccess from "./components/PaymentSuccess";
 
 axios.defaults.xsrfHeaderName = "X-CSRFTOKEN";
 axios.defaults.xsrfCookieName = "csrftoken";
@@ -44,6 +45,9 @@ const App = () => {
         </Route>
         <Route path="/checkout">
           <Checkout />
+        </Route>
+        <Route path="/success">
+          <PaymentSuccess />
         </Route>
         <Route path="/">
           <Header />

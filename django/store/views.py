@@ -72,7 +72,7 @@ class CheckoutSessionView(View):
             ],
             mode='payment',
             success_url=YOUR_DOMAIN + '/success/',
-            cancel_url=YOUR_DOMAIN + '/canceled/',
+            cancel_url=YOUR_DOMAIN + '/store/',
         )
         return JsonResponse({
             'id': checkout_session.id
