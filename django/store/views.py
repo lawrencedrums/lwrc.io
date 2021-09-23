@@ -3,12 +3,15 @@ import json
 from rest_framework import viewsets
 from rest_framework.response import Response
 from django.conf import settings
-from django.http import JsonResponse
+from django.http import JsonResponse, HttpResponse
 from django.views import View
+from django.views.decorators.csrf import csrf_exempt
 from .models import Product, Order
 from .serializers import ProductSerializer, OrderSerializer
 
 stripe.api_key = settings.STRIPE_TEST_SECRET_KEY
+
+endpoint_secret = "whsec_qq9HT8uTRbBWCla15okRGjSrSgZEEKVO"
 
 def calculate_total_price(product_id_list):
     # Calculate total price in an order
@@ -53,8 +56,6 @@ class CheckoutSessionView(View):
     def post(self, request, *args, **kwargs):
         YOUR_DOMAIN = "http://localhost:3000"
         order = json.loads(request.body)    # Convert json to a python object
-        #product_id_list = Product.objects.get(id=order['id'])
-        print(get_item_image_url(order['id']))
         checkout_session = stripe.checkout.Session.create(
             payment_method_types=['card'],
             line_items=[
@@ -77,3 +78,11 @@ class CheckoutSessionView(View):
         return JsonResponse({
             'id': checkout_session.id
         })
+
+@csrf_exempt
+def stripe_webhook(request):
+    payload = request.body
+
+    print(payload)
+
+    return HttpResponse(status=200)
