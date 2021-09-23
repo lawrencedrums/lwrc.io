@@ -8,8 +8,13 @@ import LandingPage from "./components/LandingPage";
 import Intro from "./components/Intro";
 import ProjectList from "./components/ProjectList";
 import Store from "./components/Store";
+import Checkout from "./components/Checkout";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
+import PaymentSuccess from "./components/PaymentSuccess";
+
+axios.defaults.xsrfHeaderName = "X-CSRFTOKEN";
+axios.defaults.xsrfCookieName = "csrftoken";
 
 const App = () => {
   const [projects, setProjects] = useState([]);
@@ -38,6 +43,12 @@ const App = () => {
           </Route>
           <Route path="/store">
             <Store />
+          </Route>
+          <Route path="/checkout">
+            <Checkout />
+          </Route>
+          <Route path="/success">
+            <PaymentSuccess />
           </Route>
           <Route path="/">
             <Header />

@@ -7,18 +7,14 @@ import StoreProductList from "./StoreProductList";
 const Container = styled.div`
   width: 100vw;
   max-width: 100%;
+  min-height: 100vh;
   background: #2a2a2a;
 `;
 
 const Content = styled.div`
-  height: 100vh;
   display: flex;
-  justify-content: center;
   align-items: center;
-
-  sup {
-    font-size: 10px;
-  }
+  flex-direction: column;
 `;
 
 const Store = () => {
@@ -39,10 +35,7 @@ const Store = () => {
     <Container>
       <Header />
       <Content>
-        <h1>
-          Coming Soon<sup>TM</sup>
-        </h1>
-        {/* <StoreProductList isLoading={isLoading} products={products} /> */}
+        <StoreProductList isLoading={isLoading} products={products} />
       </Content>
     </Container>
   );
