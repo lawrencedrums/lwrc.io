@@ -93,7 +93,7 @@ const StoreProductList = ({ isLoading, products }) => {
     <Container>
       <ContentWrapper>
         <SearchBar
-          setPlaceholder="Periphery, Veil of Maya, Erra..."
+          setPlaceholder="Search for a song or an artist here."
           searchQuery={searchQuery}
           setSearchQuery={setSearchQuery}
         />

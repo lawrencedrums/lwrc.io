@@ -1,7 +1,6 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import Header from "./Header";
 import StoreProductList from "./StoreProductList";
 
 const Container = styled.div`
@@ -11,10 +10,21 @@ const Container = styled.div`
   background: #2a2a2a;
 `;
 
-const Content = styled.div`
+const ContentWrapper = styled.div`
+  padding: 6rem 0rem;
   display: flex;
   align-items: center;
   flex-direction: column;
+`;
+
+const StoreIntro = styled.div`
+  width: 50vw;
+
+  p {
+    font-family: "Chivo";
+    line-height: 1.8;
+    color: white;
+  }
 `;
 
 const Store = () => {
@@ -33,10 +43,20 @@ const Store = () => {
 
   return (
     <Container>
-      <Header />
-      <Content>
+      <ContentWrapper>
+        <StoreIntro>
+          <p>
+            Transcriptions are a crucial way to learn and build your drumming
+            vocabulary and performance, new and experienced players alike.
+          </p>
+          <p>
+            This page includes a variety of transcriptions in every difficulty
+            from a wide range of artists. Pick a song you want to learn, grab
+            your sticks and let's start drumming!
+          </p>
+        </StoreIntro>
         <StoreProductList isLoading={isLoading} products={products} />
-      </Content>
+      </ContentWrapper>
     </Container>
   );
 };

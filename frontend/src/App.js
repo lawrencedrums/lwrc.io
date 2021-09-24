@@ -42,12 +42,15 @@ const App = () => {
             <Footer />
           </Route>
           <Route path="/store">
+            <Header />
             <Store />
+            <Footer />
           </Route>
           <Route path="/checkout">
             <Checkout />
           </Route>
           <Route path="/success">
+            <Header />
             <PaymentSuccess />
           </Route>
           <Route path="/">

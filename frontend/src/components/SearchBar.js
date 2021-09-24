@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const StyledSearchBar = styled.div`
-  padding: 50px;
+  padding: 2rem;
 
   input {
     width: 300px;
