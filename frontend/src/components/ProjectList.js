@@ -5,32 +5,36 @@ import Loader from "./Loader";
 const Container = styled.div`
   width: 100vw;
   max-width: 100%;
+  padding-bottom: 2rem;
   background: #f0f0f0;
+  display: flex;
+  justify-content: center;
 `;
 
 const CardList = styled.div`
+  width: 90vw;
   display: flex;
   flex-wrap: wrap;
 `;
 
 const Item = styled.div`
-  width: 32.98vw;
+  width: 30vw;
   height: 30vw;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   overflow: hidden;
-  background-color: black;
 
   img {
-    width: inherit;
-    height: inherit;
+    width: 29vw;
+    height: 29vw;
     object-fit: cover;
     transition: 0.2s;
   }
 
   h1 {
-    width: 30vw;
+    width: 28vw;
     position: absolute;
     font-family: "Raleway";
     font-size: 28px;
@@ -40,7 +44,7 @@ const Item = styled.div`
 
   :hover {
     img {
-      opacity: 0.3;
+      filter: brightness(50%);
     }
     h1 {
       opacity: 1;
