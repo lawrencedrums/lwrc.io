@@ -58,12 +58,13 @@ const Header = () => {
   return (
     <Container>
       <ContentWrapper>
-        <HeaderTitle>
-          <a href="/">Lw.</a>
-        </HeaderTitle>
+        <HeaderTitle>Lw.</HeaderTitle>
         <HeaderNav>
           <NavLink exact={true} activeClassName="is-active" to="/">
-            PROJECTS
+            HOME
+          </NavLink>
+          <NavLink activeClassName="is-active" to="/store">
+            STORE
           </NavLink>
           <NavLink activeClassName="is-active" to="/about">
             ABOUT
