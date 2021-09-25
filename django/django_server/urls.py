@@ -12,8 +12,10 @@ router.register('projects', ProjectViewSet)
 router.register('storeproducts', ProductViewSet)
 router.register('orders', OrderViewSet)
 
+ADMIN_URL = settings.ADMIN_URL
+
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path(ADMIN_URL, admin.site.urls),
     path('', include(router.urls)),
     path('create-checkout-session/', csrf_exempt(CheckoutSessionView.as_view()), name='create-checkout-session'),
     path('webhook/', stripe_webhook, name='webhook'),
