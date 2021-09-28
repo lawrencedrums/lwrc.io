@@ -39,7 +39,8 @@ const About = () => {
         <AboutText>
           <h1>Hi, I'm Lawrence.</h1>
           <h1>
-            Software Engineer, Sound Engineer, and Drummer based in Hong Kong.
+            Software Engineer, Sound Engineer, and Drummer. Based in UK, born in
+            HK.
           </h1>
           <AboutImage>(Photo coming soon)</AboutImage>
           <p>

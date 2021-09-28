@@ -63,12 +63,10 @@ const Header = () => {
           <NavLink exact={true} activeClassName="is-active" to="/">
             HOME
           </NavLink>
-          <NavLink activeClassName="is-active" to="/store">
-            STORE
-          </NavLink>
           <NavLink activeClassName="is-active" to="/about">
             ABOUT
           </NavLink>
+          STORE (Coming soon!)
         </HeaderNav>
       </ContentWrapper>
     </Container>

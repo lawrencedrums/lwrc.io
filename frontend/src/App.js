@@ -7,11 +7,8 @@ import About from "./components/About";
 import LandingPage from "./components/LandingPage";
 import Intro from "./components/Intro";
 import ProjectList from "./components/ProjectList";
-import Store from "./components/Store";
-import Checkout from "./components/Checkout";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
-import PaymentSuccess from "./components/PaymentSuccess";
 
 axios.defaults.xsrfHeaderName = "X-CSRFTOKEN";
 axios.defaults.xsrfCookieName = "csrftoken";
@@ -40,18 +37,6 @@ const App = () => {
             <Header />
             <About />
             <Footer />
-          </Route>
-          <Route path="/store">
-            <Header />
-            <Store />
-            <Footer />
-          </Route>
-          <Route path="/checkout">
-            <Checkout />
-          </Route>
-          <Route path="/success">
-            <Header />
-            <PaymentSuccess />
           </Route>
           <Route path="/">
             <Header />
