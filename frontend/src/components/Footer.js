@@ -71,7 +71,10 @@ const Footer = () => {
     <Container className="contact-container">
       <ContentWrapper>
         <Copyright>
-          <p>© 2021 Lawrence Wong. Made in HK.</p>
+          <p>
+            © {new Date().getFullYear()} Lawrence Wong. All rights reserved.
+            Made in HK.
+          </p>
         </Copyright>
         <SocialIcons>
           {socialNetworks.map((socialNetwork) => (

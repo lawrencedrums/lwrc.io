@@ -13,11 +13,10 @@
 
 ### add photo in about page
 
-# DEV Branch
-
 ### implement single item checkout
 
-- pages for - success, failure, cancelled
+- (DONE) pages for - success, failure, cancelled
+- Ask customer for email and name
 - set up sending email - fetch item from AWS and send as email
 - order history in DB
 
