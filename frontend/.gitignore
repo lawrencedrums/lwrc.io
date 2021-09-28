@@ -17,6 +17,8 @@ psd
 thumb
 sketch
 
+*.env
+
 # End of https://www.toptal.com/developers/gitignore/api/react# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies

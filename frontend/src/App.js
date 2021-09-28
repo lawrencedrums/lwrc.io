@@ -16,14 +16,14 @@ import PaymentSuccess from "./components/PaymentSuccess";
 axios.defaults.xsrfHeaderName = "X-CSRFTOKEN";
 axios.defaults.xsrfCookieName = "csrftoken";
 
+const PROJECTS_URL = process.env.REACT_APP_PROJECTS_URL;
+
 const App = () => {
   const [projects, setProjects] = useState([]);
   const [isLoading, setIsLoading] = useState([true]);
 
   const fetchData = async () => {
-    const { data } = await axios.get(
-      "https://glacial-eyrie-77569.herokuapp.com/projects/?format=json"
-    );
+    const { data } = await axios.get(PROJECTS_URL);
     setProjects(data);
     setIsLoading(false);
   };

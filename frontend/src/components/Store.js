@@ -27,12 +27,14 @@ const StoreIntro = styled.div`
   }
 `;
 
+const STORE_URL = process.env.REACT_APP_STORE_URL;
+
 const Store = () => {
   const [products, setProducts] = useState([]);
   const [isLoading, setIsLoading] = useState([true]);
 
   const fetchData = async () => {
-    const { data } = await axios.get("http://0.0.0.0:8000/storeproducts/");
+    const { data } = await axios.get(STORE_URL);
     setProducts(data);
     setIsLoading(false);
   };

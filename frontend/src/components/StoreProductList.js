@@ -42,6 +42,9 @@ const StoreItem = styled.div`
   }
 `;
 
+const CREATE_CHECKOUT_SESSION = process.env.REACT_APP_CREATE_CHECKOUT_SESSION;
+const STRIPE_SECRET_KEY = process.env.REACT_APP_STRIPE_SECRET_KEY;
+
 const filterItems = (items, query) => {
   // Filter tilte of items fetched from API base on query input
   if (!query) {
@@ -57,21 +60,16 @@ const StoreProductList = ({ isLoading, products }) => {
   const [searchQuery, setSearchQuery] = useState("");
   const filtedItems = filterItems(products, searchQuery);
 
-  const stripePromise = loadStripe(
-    "pk_test_51IKuryF3m9OLgSX0uMv3hp56aXf0wrTH7OO8xubO0Z3wTSNmZEGeKtrRyMm8lVjt4Js41dG36Egrs5O4VZzqtKte00Yb8Il71G"
-  );
+  const stripePromise = loadStripe(STRIPE_SECRET_KEY);
 
   const handleClick = async (event) => {
     // Get item id by the key mapped to its quickbuy button
     const id = event.target.id;
 
     const stripe = await stripePromise;
-    const response = await axios.post(
-      "http://0.0.0.0:8000/create-checkout-session/",
-      {
-        id: id,
-      }
-    );
+    const response = await axios.post(CREATE_CHECKOUT_SESSION, {
+      id: id,
+    });
 
     const session = await response.data;
 
