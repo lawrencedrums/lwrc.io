@@ -32,10 +32,10 @@ class Product(models.Model):
 class Order(models.Model):
     order_id = models.UUIDField(unique=True, primary_key=True, default=uuid.uuid4, editable=False)
     email = models.EmailField(max_length=250, unique=True)
-    first_name = models.CharField(max_length=30)
-    last_name = models.CharField(max_length=30)
+    first_name = models.CharField(max_length=30, blank=True)
+    last_name = models.CharField(max_length=30, blank=True)
     date = models.DateTimeField(auto_now=True)
-    ordered_items_id = ArrayField(models.IntegerField())
+    ordered_items_id = models.CharField(max_length=30)
 
     def __str__(self):
         return self.email

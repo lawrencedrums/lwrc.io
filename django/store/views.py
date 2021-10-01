@@ -3,6 +3,7 @@ import json
 from rest_framework import viewsets
 from rest_framework.response import Response
 from django.conf import settings
+from django.core.mail import send_mail
 from django.http import JsonResponse, HttpResponse
 from django.views import View
 from django.views.decorators.csrf import csrf_exempt
@@ -11,8 +12,6 @@ from .serializers import ProductSerializer, OrderSerializer
 
 stripe.api_key = settings.STRIPE_TEST_SECRET_KEY
 endpoint_secret = settings.ENDPOINT_SECRET
-
-current_order = ""
 
 def calculate_total_price(product_id_list):
     # Calculate total price in an order
@@ -57,7 +56,6 @@ class CheckoutSessionView(View):
     def post(self, request, *args, **kwargs):
         YOUR_DOMAIN = "http://localhost:3000"
         order = json.loads(request.body)    # Convert json to a python object
-        current_order = order['id']
         checkout_session = stripe.checkout.Session.create(
             payment_method_types=['card'],
             line_items=[
@@ -110,5 +108,22 @@ def stripe_webhook(request):
     return HttpResponse(status=200)
 
 def fulfill_order(session):
-    print("Customer email: ", session['customer_details']['email'])
-    print("Fulfilling: ", session['metadata'])
+    itemID = session['metadata']['id']
+    customer_email = session['customer_details']['email']
+
+    send_email_to_customer(itemID, customer_email)
+    create_fulfilled_order(itemID, customer_email)
+
+def send_email_to_customer(itemID, customer_email):
+    item_details = Product.objects.get(id=itemID)
+    print("id:", itemID)
+    print("item:", item_details.title)
+    print("Customer email:", customer_email)
+
+    # send_mail('Lwrc.io - Thank you for your purchase!', 
+    #     "Thank you for your support, you've made my day! Please find your transciptions attached below. \nLawrence Wong",
+    #     settings.EMAIL_HOST_USER, [customer_email])
+
+def create_fulfilled_order(itemID, customer_email):
+    new_order = Order(email=customer_email, ordered_items_id=itemID)
+    new_order.save()
