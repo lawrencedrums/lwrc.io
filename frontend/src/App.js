@@ -8,7 +8,6 @@ import LandingPage from "./components/LandingPage";
 import Intro from "./components/Intro";
 import ProjectList from "./components/ProjectList";
 import Store from "./components/Store";
-import Checkout from "./components/Checkout";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
 import PaymentSuccess from "./components/PaymentSuccess";
@@ -45,9 +44,6 @@ const App = () => {
             <Header />
             <Store />
             <Footer />
-          </Route>
-          <Route path="/checkout">
-            <Checkout />
           </Route>
           <Route path="/success">
             <Header />
