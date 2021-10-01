@@ -12,6 +12,8 @@ from .serializers import ProductSerializer, OrderSerializer
 stripe.api_key = settings.STRIPE_TEST_SECRET_KEY
 endpoint_secret = settings.ENDPOINT_SECRET
 
+current_order = ""
+
 def calculate_total_price(product_id_list):
     # Calculate total price in an order
     total_price = 0
@@ -55,6 +57,7 @@ class CheckoutSessionView(View):
     def post(self, request, *args, **kwargs):
         YOUR_DOMAIN = "http://localhost:3000"
         order = json.loads(request.body)    # Convert json to a python object
+        current_order = order['id']
         checkout_session = stripe.checkout.Session.create(
             payment_method_types=['card'],
             line_items=[
@@ -71,6 +74,7 @@ class CheckoutSessionView(View):
                 },
             ],
             mode='payment',
+            metadata={ "id": order['id'] },
             success_url=YOUR_DOMAIN + '/success/',
             cancel_url=YOUR_DOMAIN + '/store/',
         )
@@ -106,4 +110,5 @@ def stripe_webhook(request):
     return HttpResponse(status=200)
 
 def fulfill_order(session):
-    print("Session:", session)
+    print("Customer email: ", session['customer_details']['email'])
+    print("Fulfilling: ", session['metadata'])
