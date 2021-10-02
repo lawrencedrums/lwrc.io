@@ -3,7 +3,7 @@ import json
 from rest_framework import viewsets
 from rest_framework.response import Response
 from django.conf import settings
-from django.core.mail import send_mail
+from django.core.mail import EmailMessage
 from django.http import JsonResponse, HttpResponse
 from django.views import View
 from django.views.decorators.csrf import csrf_exempt
@@ -112,17 +112,22 @@ def fulfill_order(session):
     customer_email = session['customer_details']['email']
 
     send_email_to_customer(itemID, customer_email)
-    create_fulfilled_order(itemID, customer_email)
+    # create_fulfilled_order(itemID, customer_email)
 
 def send_email_to_customer(itemID, customer_email):
     item_details = Product.objects.get(id=itemID)
-    print("id:", itemID)
-    print("item:", item_details.title)
-    print("Customer email:", customer_email)
 
-    # send_mail('Lwrc.io - Thank you for your purchase!', 
-    #     "Thank you for your support, you've made my day! Please find your transciptions attached below. \nLawrence Wong",
-    #     settings.EMAIL_HOST_USER, [customer_email])
+    email = EmailMessage(
+    'Lwrc.io - Thank you for your purchase!',
+    "Thank you for your support, you've made my day! Please find your transciptions attached below. Lawrence Wong",
+    settings.EMAIL_HOST_USER,
+    [customer_email],
+    )
+
+    email.content_subtype = "html"
+    email.attach(item_details.title, item_details.file_link, 'application/pdf')
+    email.send()
+
 
 def create_fulfilled_order(itemID, customer_email):
     new_order = Order(email=customer_email, ordered_items_id=itemID)
