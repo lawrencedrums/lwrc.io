@@ -13,8 +13,7 @@ class Product(models.Model):
     release_date = models.DateField(blank=True)
     publish_date = models.DateField(auto_now_add=True)
     price = models.FloatField()
-    file_upload = models.FileField(upload_to='products/files')
-    file_link = models.URLField(blank=True)
+    file_link = models.URLField()
     CATAGORY_CHOICES = [
         ('Transcriptions', 'Transcriptions'),
         ('Lessons', 'Lessons'),
@@ -38,4 +37,5 @@ class Order(models.Model):
     ordered_items_id = models.CharField(max_length=30)
 
     def __str__(self):
-        return self.email
+        title = self.email + " :" + self.date
+        return title

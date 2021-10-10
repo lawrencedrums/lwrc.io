@@ -112,20 +112,16 @@ def fulfill_order(session):
     customer_email = session['customer_details']['email']
 
     send_email_to_customer(itemID, customer_email)
-    # create_fulfilled_order(itemID, customer_email)
+    create_fulfilled_order(itemID, customer_email)
 
 def send_email_to_customer(itemID, customer_email):
     item_details = Product.objects.get(id=itemID)
 
-    email = EmailMessage(
-    'Lwrc.io - Thank you for your purchase!',
-    "Thank you for your support, you've made my day! Please find your transciptions attached below. Lawrence Wong",
-    settings.EMAIL_HOST_USER,
-    [customer_email],
-    )
+    email_title = 'Lwrc.io - Thank you for your purchase!'
+    email_msg = "Dear fellow drummer,<p>Thank you for your support, you've made my day!<p/>Link to your purchases <a href=%s>here<a/>. <p>Lawrence Wong<p/>" % item_details.file_link
 
+    email = EmailMessage(email_title, email_msg, settings.EMAIL_HOST_USER, [customer_email])
     email.content_subtype = "html"
-    email.attach(item_details.title, item_details.file_link, 'application/pdf')
     email.send()
 
 
