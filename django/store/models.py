@@ -5,12 +5,8 @@ from django.contrib.postgres.fields import ArrayField
 class Product(models.Model):
     title = models.CharField(max_length=100)
     description = models.TextField(blank=True)
-    image = models.ImageField(upload_to='products/images')
+    image = models.ImageField(upload_to='products/images', blank=True)
     image_url = models.URLField(blank=True)
-    song = models.CharField(max_length=50, blank=True)
-    artist = models.CharField(max_length=50, blank=True)
-    album = models.CharField(max_length=100, blank=True)
-    release_date = models.DateField(blank=True)
     publish_date = models.DateField(auto_now_add=True)
     price = models.FloatField()
     file_link = models.URLField()
