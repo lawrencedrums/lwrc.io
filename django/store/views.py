@@ -10,7 +10,7 @@ from django.views.decorators.csrf import csrf_exempt
 from .models import Product, Order
 from .serializers import ProductSerializer, OrderSerializer
 
-stripe.api_key = settings.STRIPE_TEST_SECRET_KEY
+stripe.api_key = settings.STRIPE_SECRET_KEY
 endpoint_secret = settings.ENDPOINT_SECRET
 
 def calculate_total_price(product_id_list):
