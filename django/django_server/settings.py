@@ -141,3 +141,6 @@ EMAIL_PORT = os.environ.get('EMAIL_PORT')
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = os.environ.get('EMAIL_ADDRESS')
 EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_PASSWORD')
+
+STRIPE_SECRET_KEY = os.environ.get('STRIPE_SECRET_KEY')
+ENDPOINT_SECRET = os.environ.get('ENDPOINT_SECRET')
