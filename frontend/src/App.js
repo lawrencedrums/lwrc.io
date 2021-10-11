@@ -48,6 +48,7 @@ const App = () => {
           <Route path="/success">
             <Header />
             <PaymentSuccess />
+            <Footer />
           </Route>
           <Route path="/">
             <Header />

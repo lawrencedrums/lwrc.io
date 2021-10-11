@@ -4,7 +4,7 @@ import styled from "styled-components";
 const Container = styled.div`
   width: 100vw;
   max-width: 100%;
-  min-height: 100vh;
+  min-height: 75vh;
   background: #2a2a2a;
 `;
 

@@ -27,6 +27,7 @@ const socialNetworks = [
 const Container = styled.div`
   width: 100vw;
   max-width: 100%;
+  height: 25vh;
   display: flex;
   justify-content: center;
   background: #1a1a1a;
@@ -34,8 +35,7 @@ const Container = styled.div`
 
 const ContentWrapper = styled.div`
   width: 50vw;
-  padding-top: 2rem;
-  padding-bottom: 5rem;
+  padding: 3rem 0rem;
   display: flex;
   align-items: center;
   flex-direction: column;
