@@ -66,7 +66,9 @@ const Header = () => {
           <NavLink activeClassName="is-active" to="/about">
             ABOUT
           </NavLink>
-          STORE (Coming soon!)
+          <NavLink activeClassName="is-active" to="/store">
+            STORE
+          </NavLink>
         </HeaderNav>
       </ContentWrapper>
     </Container>

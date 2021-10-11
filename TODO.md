@@ -11,8 +11,8 @@
 ### (DONE) implement single item checkout
 
 - (DONE) pages for - success, failure, cancelled
-- (GETTING FROM STRIPE API) Ask customer for email and name
-- (IN PROGRESS - NEED FILE LINK) set up sending email - fetch item from AWS and send as email
+- (DONE) Ask customer for email and name
+- (ALTERNATIVE SOLUTION) send file via dropbox link (was set up sending email - fetch item from AWS and send as email)
 - (DONE) order history in DB
 
 ### implement user login
