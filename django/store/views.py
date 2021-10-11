@@ -3,6 +3,7 @@ import json
 from rest_framework import viewsets
 from rest_framework.response import Response
 from django.conf import settings
+from django.core.mail import EmailMessage
 from django.http import JsonResponse, HttpResponse
 from django.views import View
 from django.views.decorators.csrf import csrf_exempt
@@ -71,6 +72,7 @@ class CheckoutSessionView(View):
                 },
             ],
             mode='payment',
+            metadata={ "id": order['id'] },
             success_url=YOUR_DOMAIN + '/success/',
             cancel_url=YOUR_DOMAIN + '/store/',
         )
@@ -106,4 +108,23 @@ def stripe_webhook(request):
     return HttpResponse(status=200)
 
 def fulfill_order(session):
-    print("Session:", session)
+    itemID = session['metadata']['id']
+    customer_email = session['customer_details']['email']
+
+    send_email_to_customer(itemID, customer_email)
+    create_fulfilled_order(itemID, customer_email)
+
+def send_email_to_customer(itemID, customer_email):
+    item_details = Product.objects.get(id=itemID)
+
+    email_title = 'Lwrc.io - Thank you for your purchase!'
+    email_msg = "Dear fellow drummer,<p>Thank you for your support, you've made my day!<p/>Link to your purchases <a href=%s>here<a/>. <p>Lawrence Wong<p/>" % item_details.file_link
+
+    email = EmailMessage(email_title, email_msg, settings.EMAIL_HOST_USER, [customer_email])
+    email.content_subtype = "html"
+    email.send()
+
+
+def create_fulfilled_order(itemID, customer_email):
+    new_order = Order(email=customer_email, ordered_items_id=itemID)
+    new_order.save()

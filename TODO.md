@@ -1,11 +1,6 @@
-# MASTER Branch
+### make responsive for mobile
 
-### (DONE) createsuperuser > enter all items
-
-- projects
-- store items
-
-### increase visibility
+### make responsive for large screens
 
 ### (DONE) implement scroll reset
 
@@ -13,12 +8,12 @@
 
 ### add photo in about page
 
-### implement single item checkout
+### (DONE) implement single item checkout
 
 - (DONE) pages for - success, failure, cancelled
-- Ask customer for email and name
-- set up sending email - fetch item from AWS and send as email
-- order history in DB
+- (GETTING FROM STRIPE API) Ask customer for email and name
+- (IN PROGRESS - NEED FILE LINK) set up sending email - fetch item from AWS and send as email
+- (DONE) order history in DB
 
 ### implement user login
 

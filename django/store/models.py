@@ -13,8 +13,7 @@ class Product(models.Model):
     release_date = models.DateField(blank=True)
     publish_date = models.DateField(auto_now_add=True)
     price = models.FloatField()
-    file_upload = models.FileField(upload_to='products/files')
-    file_link = models.URLField(blank=True)
+    file_link = models.URLField()
     CATAGORY_CHOICES = [
         ('Transcriptions', 'Transcriptions'),
         ('Lessons', 'Lessons'),
@@ -31,11 +30,12 @@ class Product(models.Model):
 
 class Order(models.Model):
     order_id = models.UUIDField(unique=True, primary_key=True, default=uuid.uuid4, editable=False)
-    email = models.EmailField(max_length=250, unique=True)
-    first_name = models.CharField(max_length=30)
-    last_name = models.CharField(max_length=30)
+    email = models.EmailField(max_length=250)
+    first_name = models.CharField(max_length=30, blank=True)
+    last_name = models.CharField(max_length=30, blank=True)
     date = models.DateTimeField(auto_now=True)
-    ordered_items_id = ArrayField(models.IntegerField())
+    ordered_items_id = models.CharField(max_length=30)
 
     def __str__(self):
-        return self.email
+        title = self.email + " :" + self.date
+        return title
