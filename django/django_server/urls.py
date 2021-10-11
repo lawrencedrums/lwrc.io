@@ -10,7 +10,7 @@ from store.views import ProductViewSet, OrderViewSet, CheckoutSessionView, strip
 router = routers.DefaultRouter()
 router.register('projects', ProjectViewSet)
 router.register('storeproducts', ProductViewSet)
-router.register('orders', OrderViewSet)
+# router.register('orders', OrderViewSet)
 
 ADMIN_URL = settings.ADMIN_URL
 
