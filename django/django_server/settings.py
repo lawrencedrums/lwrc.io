@@ -45,10 +45,11 @@ MIDDLEWARE = [
 ]
 
 CORS_ALLOW_ALL_ORIGINS = os.environ.get('CORS_ALLOW_ALL_ORIGINS', default=False)
-CORS_ALLOWED_ORIGINS = [
+CORS_ALLOWED_ORIGINS = (
     'https://lwrc.io',
     'https://www.lwrc.io',
-]
+    'https://www.lwrc.io/store'
+)
 
 ROOT_URLCONF = 'django_server.urls'
 
@@ -144,3 +145,5 @@ EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_PASSWORD')
 
 STRIPE_SECRET_KEY = os.environ.get('STRIPE_SECRET_KEY')
 ENDPOINT_SECRET = os.environ.get('ENDPOINT_SECRET')
+
+YOUR_DOMAIN = os.envrion.get('YOUR_DOMAIN')

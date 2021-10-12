@@ -12,6 +12,7 @@ from .serializers import ProductSerializer, OrderSerializer
 
 stripe.api_key = settings.STRIPE_SECRET_KEY
 endpoint_secret = settings.ENDPOINT_SECRET
+YOUR_DOMAIN = settings.YOUR_DOMAIN
 
 def calculate_total_price(product_id_list):
     # Calculate total price in an order
@@ -54,7 +55,6 @@ class OrderViewSet(viewsets.ReadOnlyModelViewSet):
 
 class CheckoutSessionView(View):
     def post(self, request, *args, **kwargs):
-        YOUR_DOMAIN = "http://localhost:3000"
         order = json.loads(request.body)    # Convert json to a python object
         checkout_session = stripe.checkout.Session.create(
             payment_method_types=['card'],

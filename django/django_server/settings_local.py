@@ -19,6 +19,7 @@ SECRET_KEY = get_secret('SECRET_KEY')
 STRIPE_SECRET_KEY = get_secret('STRIPE_SECRET_KEY')
 ENDPOINT_SECRET = get_secret('ENDPOINT_SECRET')
 ADMIN_URL = get_secret('ADMIN_URL')
+YOUR_DOMAIN = get_secret('YOUR_DOMAIN')
 
 DEBUG = True
 
