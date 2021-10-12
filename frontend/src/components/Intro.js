@@ -38,8 +38,8 @@ const Intro = () => {
         <h1>Hey there, I'm Lawrence.</h1>
         <p>
           Currently, I'm a MSc Computer Science student studying in the
-          University of Bath. I'm also working a few personal projects, as well
-          as actively looking for my first job in the industry.
+          University of Bath. I'm working on a few personal projects, as well as
+          actively looking for my first job in the industry.
         </p>
         <p>
           In my 10+ years of being a drummer and sound engineer, I've played
