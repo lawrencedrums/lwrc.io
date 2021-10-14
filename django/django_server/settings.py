@@ -146,4 +146,4 @@ EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_PASSWORD')
 STRIPE_SECRET_KEY = os.environ.get('STRIPE_SECRET_KEY')
 ENDPOINT_SECRET = os.environ.get('ENDPOINT_SECRET')
 
-YOUR_DOMAIN = os.envrion.get('YOUR_DOMAIN')
+YOUR_DOMAIN = os.environ.get('YOUR_DOMAIN')
