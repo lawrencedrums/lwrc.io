@@ -56,23 +56,25 @@ class OrderViewSet(viewsets.ReadOnlyModelViewSet):
 class CheckoutSessionView(View):
     def post(self, request, *args, **kwargs):
         order = json.loads(request.body)    # Convert json to a python object
+        items_id_in_order = order['id']
+        print(items_id_in_order[0])
         checkout_session = stripe.checkout.Session.create(
             payment_method_types=['card'],
             line_items=[
                 {
                     'price_data': {
                         'currency': 'usd',
-                        'unit_amount': calculate_total_price(order['id']),
+                        'unit_amount': calculate_total_price(items_id_in_order),
                         'product_data': {
-                            'name': get_order_items(order['id']),
-                            'images': get_item_image_url(order['id']),
+                            'name': get_order_items(items_id_in_order),
+                            'images': get_item_image_url(items_id_in_order),
                         },
                     },
                     'quantity': 1,
                 },
             ],
             mode='payment',
-            metadata={ "id": order['id'] },
+            metadata={ "id": items_id_in_order[0] },
             success_url=YOUR_DOMAIN + '/success/',
             cancel_url=YOUR_DOMAIN + '/store/',
         )

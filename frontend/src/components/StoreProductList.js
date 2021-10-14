@@ -68,7 +68,7 @@ const StoreProductList = ({ isLoading, products }) => {
 
     const stripe = await stripePromise;
     const response = await axios.post(CREATE_CHECKOUT_SESSION, {
-      id: id,
+      id: [parseInt(id)],
     });
 
     const session = await response.data;
