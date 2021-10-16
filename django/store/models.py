@@ -33,5 +33,5 @@ class Order(models.Model):
     ordered_items_id = models.CharField(max_length=30)
 
     def __str__(self):
-        title = self.email + " :" + self.date
+        title = self.email + " :" + str(self.date)
         return title

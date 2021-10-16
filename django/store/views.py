@@ -14,6 +14,12 @@ stripe.api_key = settings.STRIPE_SECRET_KEY
 endpoint_secret = settings.ENDPOINT_SECRET
 YOUR_DOMAIN = settings.YOUR_DOMAIN
 
+id_in_current_order = []
+
+def set_id_in_current_order(item_id):
+    global id_in_current_order
+    id_in_current_order = item_id
+
 def calculate_total_price(product_id_list):
     # Calculate total price in an order
     total_price = 0
@@ -57,7 +63,7 @@ class CheckoutSessionView(View):
     def post(self, request, *args, **kwargs):
         order = json.loads(request.body)    # Convert json to a python object
         items_id_in_order = order['id']
-        print(items_id_in_order[0])
+        set_id_in_current_order(items_id_in_order)
         checkout_session = stripe.checkout.Session.create(
             payment_method_types=['card'],
             line_items=[
@@ -114,17 +120,19 @@ def fulfill_order(session):
     customer_email = session['customer_details']['email']
 
     send_email_to_customer(itemID, customer_email)
-    create_fulfilled_order(itemID, customer_email)
+    # create_fulfilled_order(itemID, customer_email)
 
 def send_email_to_customer(itemID, customer_email):
     item_details = Product.objects.get(id=itemID)
 
-    email_title = 'Lwrc.io - Thank you for your purchase!'
-    email_msg = "Dear fellow drummer,<p>Thank you for your support, you've made my day!<p/>Link to your purchases <a href=%s>here<a/>. <p>Lawrence Wong<p/>" % item_details.file_link
+    # hacky way to stop duplicated checkout.session.completed to send more email
+    if id_in_current_order[0] == int(itemID):
+        email_title = 'Lwrc.io - Thank you for your purchase!'
+        email_msg = "Dear fellow drummer,<p>Thank you for your support, you've made my day!<p/>Link to your purchases <a href=%s>here<a/>. <p>Lawrence Wong<p/>" % item_details.file_link
 
-    email = EmailMessage(email_title, email_msg, settings.EMAIL_HOST_USER, [customer_email])
-    email.content_subtype = "html"
-    email.send()
+        email = EmailMessage(email_title, email_msg, settings.EMAIL_HOST_USER, [customer_email])
+        email.content_subtype = "html"
+        email.send()
 
 
 def create_fulfilled_order(itemID, customer_email):
