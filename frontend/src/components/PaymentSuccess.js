@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import Header from "./Header";
 import { NavLink } from "react-router-dom";
 
 const Container = styled.div`
@@ -33,7 +32,6 @@ const ContentWrapper = styled.div`
 const PaymentSuccess = () => {
   return (
     <Container>
-      <Header />
       <ContentWrapper>
         <p>
           You've made my day! Thank you for your support. <br /> <br />
