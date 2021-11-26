@@ -14,10 +14,13 @@ In this project I'm using React on the frontend. It also built on sereval other 
 
 Backend is written in Python using the Django and Django REST framework. Using Docker as a container, the backend is hosted on Heroku connected to a Postgres datebase. Any static files uploaded to Django is saved in the AWS.
 
-### Features to add:
+### TODO:
 
-1. Make responsive to mobile/large screens
-2. Contact form
-3. Shopping cart/multi-item checkout
-4. User Login
-5. Add photo
+- Responsive Design
+  - Large Screens
+  - Mobile
+- Migrate to TypeScript
+- Contact form
+- Shopping cart/multi-item checkout
+- User Login
+- Add personal photo
