@@ -49,7 +49,7 @@ const LandingPage = () => {
     <Container>
       <ContentWrapper>
         <h1>Lawrence Wong</h1>
-        <p>Drummer / Sound Engineer / Developer</p>
+        <p>Software Engineer / Sound Engineer / Drummer</p>
       </ContentWrapper>
     </Container>
   );
