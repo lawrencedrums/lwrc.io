@@ -1,6 +1,6 @@
 import axios from "axios";
-import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import React, { Fragment, useState, useEffect } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Header from "./components/Header";
 import About from "./components/About";
@@ -32,34 +32,43 @@ const App = () => {
   }, []);
 
   return (
-    <Router>
+    // <> & </> inside routes are React.Fragment, similar to <div>
+    // https://www.reddit.com/r/reactjs/comments/r1usv4/how_do_i_display_multiple_components_on_a_single/
+    <BrowserRouter>
       <ScrollToTop>
-        <Switch>
-          <Route path="/about">
-            <Header />
-            <About />
-            <Footer />
-          </Route>
-          <Route path="/store">
-            <Header />
-            <Store />
-            <Footer />
-          </Route>
-          <Route path="/success">
-            <Header />
-            <PaymentSuccess />
-            <Footer />
-          </Route>
-          <Route path="/">
-            <Header />
-            <LandingPage />
-            <Intro />
-            <ProjectList isLoading={isLoading} projects={projects} />
-            <Footer />
-          </Route>
-        </Switch>
+        <Routes>
+          <Route path="/about" element={
+          <>
+          <Header />
+          <About />
+          <Footer />
+          </>
+        } />
+        <Route path="/store" element={
+          <>
+          <Header />
+          <Store /> <Footer />
+          </>
+        } />
+        <Route path="/success" element={
+          <>
+          <Header />
+          <PaymentSuccess />
+          <Footer />
+          </>
+        } />
+        <Route path="/" element={
+          <>
+          <Header />
+          <LandingPage />
+          <Intro />
+          <ProjectList isLoading={isLoading} projects={projects} />
+          <Footer />
+          </>
+        } />
+        </Routes>
       </ScrollToTop>
-    </Router>
+    </BrowserRouter>
   );
 };
 
